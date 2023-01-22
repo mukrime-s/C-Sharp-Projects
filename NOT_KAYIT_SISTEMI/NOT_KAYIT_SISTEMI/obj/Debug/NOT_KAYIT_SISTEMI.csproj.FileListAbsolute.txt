@@ -1,0 +1,13 @@
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\bin\Debug\NOT_KAYIT_SISTEMI.exe.config
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\bin\Debug\NOT_KAYIT_SISTEMI.exe
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\bin\Debug\NOT_KAYIT_SISTEMI.pdb
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.csproj.AssemblyReference.cache
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.frmGiris.resources
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.frmOgrenciDetay.resources
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.frmOgretmenDetay.resources
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.Properties.Resources.resources
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.csproj.GenerateResource.cache
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.csproj.CoreCompileInputs.cache
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.exe
+C:\Users\Mukoo\source\repos\NOT_KAYIT_SISTEMI\NOT_KAYIT_SISTEMI\obj\Debug\NOT_KAYIT_SISTEMI.pdb
