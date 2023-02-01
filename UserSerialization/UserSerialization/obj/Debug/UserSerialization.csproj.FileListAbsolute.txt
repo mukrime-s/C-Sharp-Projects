@@ -1,0 +1,11 @@
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\bin\Debug\UserSerialization.exe.config
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\bin\Debug\UserSerialization.exe
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\bin\Debug\UserSerialization.pdb
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.csproj.AssemblyReference.cache
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.Form1.resources
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.Properties.Resources.resources
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.csproj.GenerateResource.cache
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.csproj.CoreCompileInputs.cache
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.exe
+C:\Users\Mukoo\Desktop\UserSerialization\UserSerialization\obj\Debug\UserSerialization.pdb
