@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraGantt;
-
+using Newtonsoft.Json;
 namespace gant
 {
+    
     public partial class Form1 : Form
     {
         public Form1()
@@ -24,42 +26,55 @@ namespace gant
             ganttControl1.ChartMappings.DurationFieldName = "Duration";
             ganttControl1.ChartMappings.PredecessorsFieldName = "Predecessors";
             ganttControl1.ChartMappings.ProgressFieldName = "Progress";
-            ganttControl1.DataSource = LoadData();
+            ganttControl1.DataSource = LoadDataAsArray();
             //bu kısım taskları hareket ettirebilmek icin olusturulmustur.
             ganttControl1.OptionsCustomization.AllowModifyTasks = DevExpress.Utils.DefaultBoolean.True; 
             ganttControl1.OptionsCustomization.AllowModifyProgress = DevExpress.Utils.DefaultBoolean.True;
             ganttControl1.OptionsCustomization.AllowModifyDependencies = DevExpress.Utils.DefaultBoolean.True;
+            Task[] tasks = LoadDataAsArray();
 
-
+            try//verileri tast.txt ye kaydetme islemi denendi.
+            {
+                using (StreamWriter file = new StreamWriter("tasks.txt"))
+                {
+                    string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);//veriler json formatina donusturuldu.
+                    file.WriteLine(json);
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine("An error occurred while writing to the file: " + exc.Message);
+            }
         }
 
-        public static List<Task> LoadData()
+        public static Task[] LoadDataAsArray()
         {
-            var tasks = new List<Task>();
-            Task softwareDevelopment = new Task("Yazılım Geliştirme", 0, -1, DateTime.Now, 1, 24);
-            Task analyseRequirements = new Task("Analiz Yapma", 1, softwareDevelopment.Id, softwareDevelopment.StartDate, 2, 200);
-            Task developTesting = new Task("Yazılım Testi Yapma", 2, softwareDevelopment.Id, analyseRequirements.FinishDate, 3, 250, 2);
-            Task developSoftware = new Task("Yazılım Kodlama", 3, softwareDevelopment.Id, developTesting.FinishDate, 5, 40, developTesting.Id);
-            Task softwareMaintenance = new Task("Yazımının Bakımını Yapma", 4, softwareDevelopment.Id, developTesting.FinishDate, 1, 90, developTesting.Id);
-            Task supervisingInterns = new Task("Stajyerleri Denetleme", 5, softwareDevelopment.Id, softwareMaintenance.FinishDate, 1, 0, softwareMaintenance.Id);
-            Task sentFeedback = new Task("Geri Bildirim Gönderme", 6, softwareDevelopment.Id, supervisingInterns.FinishDate, 2, 0, supervisingInterns.Id);
-            Task fixBugs = new Task("Hataları Temizleme", 7, softwareDevelopment.Id, sentFeedback.FinishDate, 2, 0, sentFeedback.Id);
-            Task developFrontend = new Task("Görünümü Düzenleme", 8, softwareDevelopment.Id, fixBugs.FinishDate, 3, 0, fixBugs.Id);
-            Task rewardTeam= new Task("Proje Bitiminde Çalışanları Ödüllendirmek", 9, softwareDevelopment.Id, developFrontend.FinishDate, 0, 0, developFrontend.Id);
-            softwareDevelopment.FinishDate = rewardTeam.FinishDate;
-            tasks.AddRange(new Task[] {softwareDevelopment, analyseRequirements, developTesting, developSoftware, softwareMaintenance, supervisingInterns,
-            sentFeedback,fixBugs,developFrontend, rewardTeam });
-            
 
+            Task[] tasks = new Task[] {
+                //Yazılım gelistirme plani
+                new Task("Yazılım Geliştirme", 0, -1, DateTime.Now, 1, 24),
+                new Task("Analiz Yapma", 1, 0, DateTime.Now, 2, 200),
+                new Task("Yazılım Testi Yapma", 2, 0, DateTime.Now.AddDays(2), 3, 250, 2),
+                new Task("Yazılım Kodlama", 3, 0, DateTime.Now.AddDays(5), 5, 40, 2),
+                new Task("Yazımının Bakımını Yapma", 4, 0, DateTime.Now.AddDays(5), 1, 90, 2),
+                new Task("Stajyerleri Denetleme", 5, 0, DateTime.Now.AddDays(6), 1, 5, 2),
+                new Task("Geri Bildirim Gönderme", 6, 0, DateTime.Now.AddDays(7), 2, 5, 2),
+                new Task("Hataları Temizleme", 7, 0, DateTime.Now.AddDays(9), 2, 5, 2),
+                new Task("Görünümü Düzenleme", 8, 0, DateTime.Now.AddDays(11), 3, 5, 2),
+                new Task("Proje Bitiminde Çalışanları Ödüllendirmek", 9, 0, DateTime.Now.AddDays(14), 1, 0, 2),
+                //inglizce ogrenme plani
+                new Task("İnglizce Öğrenme", 10, -1, DateTime.Now, 1, 24),
+                new Task("Pratik Yapma", 11, 10, DateTime.Now, 1, 100),
+                new Task("Kursa Gitme", 12, 10, DateTime.Now.AddDays(1), 7, 100, 11),
+                new Task("Test Çözme", 13, 10, DateTime.Now.AddDays(7), 9, 89, 11),
+                new Task("Sınava Çalışma", 14, 10, DateTime.Now.AddDays(9), 11, 50, 11),
+                new Task("İngiltere'ye Taşınma", 15, 10, DateTime.Now.AddDays(20), 15, 75, 4),
+            };
+        
+            Task softwareDevelopment = tasks[0];
+            softwareDevelopment.FinishDate = tasks[9].FinishDate;
+            tasks[10].FinishDate = tasks[15].FinishDate;
 
-            Task learnEnglish = new Task("İnglizce Öğrenme", 10, -1, DateTime.Now, 1, 24);
-            Task makePractise = new Task("Pratik Yapma", 11, learnEnglish.Id, softwareDevelopment.StartDate, 1, 100);
-            Task goCourse = new Task("Kursa Gitme", 12, learnEnglish.Id, analyseRequirements.FinishDate, 7, 100, 1);
-            Task solveTest = new Task("Test Çözme", 13, learnEnglish.Id, developTesting.FinishDate, 9, 89, developTesting.Id);
-            Task studyExam = new Task("Sınava Çalışma", 14, learnEnglish.Id, developTesting.FinishDate, 11, 50, developTesting.Id);
-            Task movintoEngland = new Task("İngiltere'ye Taşınma", 15, learnEnglish.Id, studyExam.FinishDate, 15, 75, softwareMaintenance.Id);
-            learnEnglish.FinishDate = movintoEngland.FinishDate;
-            tasks.AddRange(new Task[] {learnEnglish, makePractise,goCourse,solveTest,studyExam, movintoEngland });
             return tasks;
         }
         public class Task
@@ -87,6 +102,11 @@ namespace gant
             public DateTime FinishDate { get; set; }
             public TimeSpan Duration { get; set; }
             public double Progress { get; set; }
+        }
+        public class converToJson
+        {
+            static Task[] tasks = LoadDataAsArray();
+
         }
 
     }
