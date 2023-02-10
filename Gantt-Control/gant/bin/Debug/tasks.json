@@ -1,0 +1,186 @@
+[
+  {
+    "Id": 0,
+    "ParentId": -1,
+    "Predecessors": [],
+    "Name": "Yazılım Geliştirme",
+    "StartDate": "2023-01-04T08:00:00",
+    "FinishDate": "2023-01-30T17:00:00",
+    "Duration": "6.08:00:00",
+    "Progress": 24.0
+  },
+  {
+    "Id": 1,
+    "ParentId": 0,
+    "Predecessors": [],
+    "Name": "Analiz Yapma",
+    "StartDate": "2023-01-09T08:00:00",
+    "FinishDate": "2023-01-16T17:00:00",
+    "Duration": "2.00:00:00",
+    "Progress": 200.0
+  },
+  {
+    "Id": 2,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Yazılım Testi Yapma",
+    "StartDate": "2023-01-09T08:00:00",
+    "FinishDate": "2023-01-19T17:00:00",
+    "Duration": "3.00:00:00",
+    "Progress": 250.0
+  },
+  {
+    "Id": 3,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Yazılım Kodlama",
+    "StartDate": "2023-01-04T08:00:00",
+    "FinishDate": "2023-01-24T17:00:00",
+    "Duration": "5.00:00:00",
+    "Progress": 40.0
+  },
+  {
+    "Id": 4,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Yazımının Bakımını Yapma",
+    "StartDate": "2023-01-18T08:00:00",
+    "FinishDate": "2023-01-20T17:00:00",
+    "Duration": "1.00:00:00",
+    "Progress": 90.0
+  },
+  {
+    "Id": 5,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Stajyerleri Denetleme",
+    "StartDate": "2023-01-19T08:00:00",
+    "FinishDate": "2023-01-23T17:00:00",
+    "Duration": "1.00:00:00",
+    "Progress": 5.0
+  },
+  {
+    "Id": 6,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Geri Bildirim Gönderme",
+    "StartDate": "2023-01-12T08:00:00",
+    "FinishDate": "2023-01-24T17:00:00",
+    "Duration": "3.00:00:00",
+    "Progress": 5.0
+  },
+  {
+    "Id": 7,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Hataları Temizleme",
+    "StartDate": "2023-01-16T08:00:00",
+    "FinishDate": "2023-01-26T17:00:00",
+    "Duration": "3.00:00:00",
+    "Progress": 5.0
+  },
+  {
+    "Id": 8,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Görünümü Düzenleme",
+    "StartDate": "2023-01-18T08:00:00",
+    "FinishDate": "2023-01-30T17:00:00",
+    "Duration": "3.00:00:00",
+    "Progress": 5.0
+  },
+  {
+    "Id": 9,
+    "ParentId": 0,
+    "Predecessors": [
+      2
+    ],
+    "Name": "Proje Bitiminde Çalışanları Ödüllendirmek",
+    "StartDate": "2023-01-26T08:00:00",
+    "FinishDate": "2023-01-30T17:00:00",
+    "Duration": "1.00:00:00",
+    "Progress": 0.0
+  },
+  {
+    "Id": 10,
+    "ParentId": -1,
+    "Predecessors": [],
+    "Name": "İnglizce Öğrenme",
+    "StartDate": "2023-02-10T17:43:09.9093983+03:00",
+    "FinishDate": "2023-03-17T17:43:09.9093983+03:00",
+    "Duration": "8.08:00:00",
+    "Progress": 24.0
+  },
+  {
+    "Id": 11,
+    "ParentId": 10,
+    "Predecessors": [],
+    "Name": "Pratik Yapma",
+    "StartDate": "2023-02-10T17:43:09.9093983+03:00",
+    "FinishDate": "2023-02-11T17:43:09.9093983+03:00",
+    "Duration": "1.00:00:00",
+    "Progress": 100.0
+  },
+  {
+    "Id": 12,
+    "ParentId": 10,
+    "Predecessors": [
+      11
+    ],
+    "Name": "Kursa Gitme",
+    "StartDate": "2023-02-11T17:43:09.9093983+03:00",
+    "FinishDate": "2023-02-18T17:43:09.9093983+03:00",
+    "Duration": "7.00:00:00",
+    "Progress": 100.0
+  },
+  {
+    "Id": 13,
+    "ParentId": 10,
+    "Predecessors": [
+      11
+    ],
+    "Name": "Test Çözme",
+    "StartDate": "2023-02-17T17:43:09.9093983+03:00",
+    "FinishDate": "2023-02-26T17:43:09.9093983+03:00",
+    "Duration": "9.00:00:00",
+    "Progress": 89.0
+  },
+  {
+    "Id": 14,
+    "ParentId": 10,
+    "Predecessors": [
+      11
+    ],
+    "Name": "Sınava Çalışma",
+    "StartDate": "2023-02-19T17:43:09.9093983+03:00",
+    "FinishDate": "2023-03-02T17:43:09.9093983+03:00",
+    "Duration": "11.00:00:00",
+    "Progress": 50.0
+  },
+  {
+    "Id": 15,
+    "ParentId": 10,
+    "Predecessors": [
+      4
+    ],
+    "Name": "İngiltere'ye Taşınma",
+    "StartDate": "2023-03-02T17:43:09.9093983+03:00",
+    "FinishDate": "2023-03-17T17:43:09.9093983+03:00",
+    "Duration": "15.00:00:00",
+    "Progress": 75.0
+  }
+]

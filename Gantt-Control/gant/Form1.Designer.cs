@@ -31,21 +31,23 @@ namespace gant
         {
             this.ganttControl1 = new DevExpress.XtraGantt.GanttControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ganttBarController1 = new DevExpress.XtraGantt.Ribbon.GanttBarController();
-            this.ganttSplitViewRibbonPageGroup1 = new DevExpress.XtraGantt.Ribbon.GanttSplitViewRibbonPageGroup();
-            this.ganttViewRibbonPage1 = new DevExpress.XtraGantt.Ribbon.GanttViewRibbonPage();
             this.ganttAllowResizeBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttAllowResizeBarCheckItem();
+            this.ganttPanelVisibilityBarSubItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityBarSubItem();
             this.ganttPanelVisibilityDefaultBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityDefaultBarCheckItem();
             this.ganttPanelVisibilityBothBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityBothBarCheckItem();
             this.ganttPanelVisibilityChartBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityChartBarCheckItem();
             this.ganttPanelVisibilityTreeBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityTreeBarCheckItem();
-            this.ganttPanelVisibilityBarSubItem1 = new DevExpress.XtraGantt.Ribbon.GanttPanelVisibilityBarSubItem();
+            this.ganttFixedPanelBarSubItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelBarSubItem();
             this.ganttFixedPanelDefaultBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelDefaultBarCheckItem();
             this.ganttFixedPanelNoneBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelNoneBarCheckItem();
             this.ganttFixedPanelChartBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelChartBarCheckItem();
             this.ganttFixedPanelTreeBarCheckItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelTreeBarCheckItem();
-            this.ganttFixedPanelBarSubItem1 = new DevExpress.XtraGantt.Ribbon.GanttFixedPanelBarSubItem();
+            this.ganttViewRibbonPage1 = new DevExpress.XtraGantt.Ribbon.GanttViewRibbonPage();
+            this.ganttSplitViewRibbonPageGroup1 = new DevExpress.XtraGantt.Ribbon.GanttSplitViewRibbonPageGroup();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ganttBarController1 = new DevExpress.XtraGantt.Ribbon.GanttBarController();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ganttControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ganttBarController1)).BeginInit();
@@ -64,8 +66,8 @@ namespace gant
             this.ribbonControl1.AutoHideEmptyItems = true;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.SearchEditItem,
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.ganttAllowResizeBarCheckItem1,
             this.ganttPanelVisibilityBarSubItem1,
             this.ganttPanelVisibilityDefaultBarCheckItem1,
@@ -86,6 +88,85 @@ namespace gant
             this.ribbonControl1.Size = new System.Drawing.Size(800, 183);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
+            // 
+            // ganttAllowResizeBarCheckItem1
+            // 
+            this.ganttAllowResizeBarCheckItem1.Id = 1;
+            this.ganttAllowResizeBarCheckItem1.Name = "ganttAllowResizeBarCheckItem1";
+            // 
+            // ganttPanelVisibilityBarSubItem1
+            // 
+            this.ganttPanelVisibilityBarSubItem1.Id = 2;
+            this.ganttPanelVisibilityBarSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityDefaultBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityBothBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityChartBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityTreeBarCheckItem1)});
+            this.ganttPanelVisibilityBarSubItem1.Name = "ganttPanelVisibilityBarSubItem1";
+            // 
+            // ganttPanelVisibilityDefaultBarCheckItem1
+            // 
+            this.ganttPanelVisibilityDefaultBarCheckItem1.Id = 3;
+            this.ganttPanelVisibilityDefaultBarCheckItem1.Name = "ganttPanelVisibilityDefaultBarCheckItem1";
+            // 
+            // ganttPanelVisibilityBothBarCheckItem1
+            // 
+            this.ganttPanelVisibilityBothBarCheckItem1.Id = 4;
+            this.ganttPanelVisibilityBothBarCheckItem1.Name = "ganttPanelVisibilityBothBarCheckItem1";
+            // 
+            // ganttPanelVisibilityChartBarCheckItem1
+            // 
+            this.ganttPanelVisibilityChartBarCheckItem1.Id = 5;
+            this.ganttPanelVisibilityChartBarCheckItem1.Name = "ganttPanelVisibilityChartBarCheckItem1";
+            // 
+            // ganttPanelVisibilityTreeBarCheckItem1
+            // 
+            this.ganttPanelVisibilityTreeBarCheckItem1.Id = 6;
+            this.ganttPanelVisibilityTreeBarCheckItem1.Name = "ganttPanelVisibilityTreeBarCheckItem1";
+            // 
+            // ganttFixedPanelBarSubItem1
+            // 
+            this.ganttFixedPanelBarSubItem1.Id = 7;
+            this.ganttFixedPanelBarSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelDefaultBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelNoneBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelChartBarCheckItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelTreeBarCheckItem1)});
+            this.ganttFixedPanelBarSubItem1.Name = "ganttFixedPanelBarSubItem1";
+            // 
+            // ganttFixedPanelDefaultBarCheckItem1
+            // 
+            this.ganttFixedPanelDefaultBarCheckItem1.Id = 8;
+            this.ganttFixedPanelDefaultBarCheckItem1.Name = "ganttFixedPanelDefaultBarCheckItem1";
+            // 
+            // ganttFixedPanelNoneBarCheckItem1
+            // 
+            this.ganttFixedPanelNoneBarCheckItem1.Id = 9;
+            this.ganttFixedPanelNoneBarCheckItem1.Name = "ganttFixedPanelNoneBarCheckItem1";
+            // 
+            // ganttFixedPanelChartBarCheckItem1
+            // 
+            this.ganttFixedPanelChartBarCheckItem1.Id = 10;
+            this.ganttFixedPanelChartBarCheckItem1.Name = "ganttFixedPanelChartBarCheckItem1";
+            // 
+            // ganttFixedPanelTreeBarCheckItem1
+            // 
+            this.ganttFixedPanelTreeBarCheckItem1.Id = 11;
+            this.ganttFixedPanelTreeBarCheckItem1.Name = "ganttFixedPanelTreeBarCheckItem1";
+            // 
+            // ganttViewRibbonPage1
+            // 
+            this.ganttViewRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ganttSplitViewRibbonPageGroup1});
+            this.ganttViewRibbonPage1.Name = "ganttViewRibbonPage1";
+            // 
+            // ganttSplitViewRibbonPageGroup1
+            // 
+            this.ganttSplitViewRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttAllowResizeBarCheckItem1);
+            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttPanelVisibilityBarSubItem1);
+            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttFixedPanelBarSubItem1);
+            this.ganttSplitViewRibbonPageGroup1.Name = "ganttSplitViewRibbonPageGroup1";
             // 
             // ribbonStatusBar1
             // 
@@ -109,90 +190,33 @@ namespace gant
             this.ganttBarController1.BarItems.Add(this.ganttFixedPanelBarSubItem1);
             this.ganttBarController1.Control = this.ganttControl1;
             // 
-            // ganttSplitViewRibbonPageGroup1
+            // btnGuncelle
             // 
-            this.ganttSplitViewRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
-            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttAllowResizeBarCheckItem1);
-            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttPanelVisibilityBarSubItem1);
-            this.ganttSplitViewRibbonPageGroup1.ItemLinks.Add(this.ganttFixedPanelBarSubItem1);
-            this.ganttSplitViewRibbonPageGroup1.Name = "ganttSplitViewRibbonPageGroup1";
+            this.btnGuncelle.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnGuncelle.Location = new System.Drawing.Point(273, 111);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(119, 57);
+            this.btnGuncelle.TabIndex = 3;
+            this.btnGuncelle.Text = "Verileri Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // ganttViewRibbonPage1
+            // button2
             // 
-            this.ganttViewRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ganttSplitViewRibbonPageGroup1});
-            this.ganttViewRibbonPage1.Name = "ganttViewRibbonPage1";
-            // 
-            // ganttAllowResizeBarCheckItem1
-            // 
-            this.ganttAllowResizeBarCheckItem1.Id = 1;
-            this.ganttAllowResizeBarCheckItem1.Name = "ganttAllowResizeBarCheckItem1";
-            // 
-            // ganttPanelVisibilityDefaultBarCheckItem1
-            // 
-            this.ganttPanelVisibilityDefaultBarCheckItem1.Id = 3;
-            this.ganttPanelVisibilityDefaultBarCheckItem1.Name = "ganttPanelVisibilityDefaultBarCheckItem1";
-            // 
-            // ganttPanelVisibilityBothBarCheckItem1
-            // 
-            this.ganttPanelVisibilityBothBarCheckItem1.Id = 4;
-            this.ganttPanelVisibilityBothBarCheckItem1.Name = "ganttPanelVisibilityBothBarCheckItem1";
-            // 
-            // ganttPanelVisibilityChartBarCheckItem1
-            // 
-            this.ganttPanelVisibilityChartBarCheckItem1.Id = 5;
-            this.ganttPanelVisibilityChartBarCheckItem1.Name = "ganttPanelVisibilityChartBarCheckItem1";
-            // 
-            // ganttPanelVisibilityTreeBarCheckItem1
-            // 
-            this.ganttPanelVisibilityTreeBarCheckItem1.Id = 6;
-            this.ganttPanelVisibilityTreeBarCheckItem1.Name = "ganttPanelVisibilityTreeBarCheckItem1";
-            // 
-            // ganttPanelVisibilityBarSubItem1
-            // 
-            this.ganttPanelVisibilityBarSubItem1.Id = 2;
-            this.ganttPanelVisibilityBarSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityDefaultBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityBothBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityChartBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttPanelVisibilityTreeBarCheckItem1)});
-            this.ganttPanelVisibilityBarSubItem1.Name = "ganttPanelVisibilityBarSubItem1";
-            // 
-            // ganttFixedPanelDefaultBarCheckItem1
-            // 
-            this.ganttFixedPanelDefaultBarCheckItem1.Id = 8;
-            this.ganttFixedPanelDefaultBarCheckItem1.Name = "ganttFixedPanelDefaultBarCheckItem1";
-            // 
-            // ganttFixedPanelNoneBarCheckItem1
-            // 
-            this.ganttFixedPanelNoneBarCheckItem1.Id = 9;
-            this.ganttFixedPanelNoneBarCheckItem1.Name = "ganttFixedPanelNoneBarCheckItem1";
-            // 
-            // ganttFixedPanelChartBarCheckItem1
-            // 
-            this.ganttFixedPanelChartBarCheckItem1.Id = 10;
-            this.ganttFixedPanelChartBarCheckItem1.Name = "ganttFixedPanelChartBarCheckItem1";
-            // 
-            // ganttFixedPanelTreeBarCheckItem1
-            // 
-            this.ganttFixedPanelTreeBarCheckItem1.Id = 11;
-            this.ganttFixedPanelTreeBarCheckItem1.Name = "ganttFixedPanelTreeBarCheckItem1";
-            // 
-            // ganttFixedPanelBarSubItem1
-            // 
-            this.ganttFixedPanelBarSubItem1.Id = 7;
-            this.ganttFixedPanelBarSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelDefaultBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelNoneBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelChartBarCheckItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.ganttFixedPanelTreeBarCheckItem1)});
-            this.ganttFixedPanelBarSubItem1.Name = "ganttFixedPanelBarSubItem1";
+            this.button2.Location = new System.Drawing.Point(602, 424);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 8);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.ganttControl1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
@@ -225,6 +249,8 @@ namespace gant
         private DevExpress.XtraGantt.Ribbon.GanttSplitViewRibbonPageGroup ganttSplitViewRibbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraGantt.Ribbon.GanttBarController ganttBarController1;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button button2;
     }
 }
 
