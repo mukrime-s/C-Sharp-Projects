@@ -34,35 +34,35 @@ namespace technical_service.Forms
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.txtUrunAd = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMarka = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAlisFiyati = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtSatisFiyati = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStok = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
-            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
             this.txtID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.btnListele = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSil = new DevExpress.XtraEditors.SimpleButton();
+            this.btnGuncelle = new DevExpress.XtraEditors.SimpleButton();
+            this.btnKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.txtStok = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSatisFiyati = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAlisFiyati = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMarka = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtUrunAd = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUrunAd.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyati.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyati.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStok.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStok.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyati.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyati.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUrunAd.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -113,65 +113,80 @@ namespace technical_service.Forms
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "groupControl1";
             // 
-            // txtUrunAd
+            // txtID
             // 
-            this.txtUrunAd.Location = new System.Drawing.Point(120, 64);
-            this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(125, 22);
-            this.txtUrunAd.TabIndex = 4;
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(120, 33);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(125, 22);
+            this.txtID.TabIndex = 20;
             // 
-            // labelControl1
+            // labelControl7
             // 
-            this.labelControl1.Location = new System.Drawing.Point(32, 70);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(49, 16);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Ürün Adı";
+            this.labelControl7.Location = new System.Drawing.Point(32, 39);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(43, 16);
+            this.labelControl7.TabIndex = 19;
+            this.labelControl7.Text = "Ürün ID";
             // 
-            // txtMarka
+            // btnListele
             // 
-            this.txtMarka.Location = new System.Drawing.Point(120, 99);
-            this.txtMarka.Name = "txtMarka";
-            this.txtMarka.Size = new System.Drawing.Size(125, 22);
-            this.txtMarka.TabIndex = 6;
+            this.btnListele.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnListele.ImageOptions.SvgImage")));
+            this.btnListele.Location = new System.Drawing.Point(60, 333);
+            this.btnListele.Name = "btnListele";
+            this.btnListele.Size = new System.Drawing.Size(185, 39);
+            this.btnListele.TabIndex = 18;
+            this.btnListele.Text = "Listele";
+            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
             // 
-            // labelControl2
+            // btnSil
             // 
-            this.labelControl2.Location = new System.Drawing.Point(32, 105);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(35, 16);
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Marka";
+            this.btnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSil.ImageOptions.SvgImage")));
+            this.btnSil.Location = new System.Drawing.Point(60, 423);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(185, 39);
+            this.btnSil.TabIndex = 17;
+            this.btnSil.Text = "Sil";
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // txtAlisFiyati
+            // btnGuncelle
             // 
-            this.txtAlisFiyati.Location = new System.Drawing.Point(120, 137);
-            this.txtAlisFiyati.Name = "txtAlisFiyati";
-            this.txtAlisFiyati.Size = new System.Drawing.Size(125, 22);
-            this.txtAlisFiyati.TabIndex = 8;
+            this.btnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnGuncelle.ImageOptions.SvgImage")));
+            this.btnGuncelle.Location = new System.Drawing.Point(60, 378);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(185, 39);
+            this.btnGuncelle.TabIndex = 16;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // labelControl3
+            // btnKaydet
             // 
-            this.labelControl3.Location = new System.Drawing.Point(32, 143);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(54, 16);
-            this.labelControl3.TabIndex = 7;
-            this.labelControl3.Text = "Alış Fiyatı";
+            this.btnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnKaydet.ImageOptions.SvgImage")));
+            this.btnKaydet.Location = new System.Drawing.Point(60, 288);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(185, 39);
+            this.btnKaydet.TabIndex = 15;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // txtSatisFiyati
+            // labelControl6
             // 
-            this.txtSatisFiyati.Location = new System.Drawing.Point(120, 175);
-            this.txtSatisFiyati.Name = "txtSatisFiyati";
-            this.txtSatisFiyati.Size = new System.Drawing.Size(125, 22);
-            this.txtSatisFiyati.TabIndex = 10;
+            this.labelControl6.Location = new System.Drawing.Point(32, 247);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(47, 16);
+            this.labelControl6.TabIndex = 14;
+            this.labelControl6.Text = "Kategori";
             // 
-            // labelControl4
+            // lookUpEdit1
             // 
-            this.labelControl4.Location = new System.Drawing.Point(32, 181);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(62, 16);
-            this.labelControl4.TabIndex = 9;
-            this.labelControl4.Text = "Satış Fiyatı";
+            this.lookUpEdit1.Location = new System.Drawing.Point(120, 244);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.DisplayMember = "AD";
+            this.lookUpEdit1.Properties.ValueMember = "ID";
+            this.lookUpEdit1.Size = new System.Drawing.Size(125, 22);
+            this.lookUpEdit1.TabIndex = 13;
             // 
             // txtStok
             // 
@@ -188,78 +203,65 @@ namespace technical_service.Forms
             this.labelControl5.TabIndex = 11;
             this.labelControl5.Text = "Stok";
             // 
-            // lookUpEdit1
+            // txtSatisFiyati
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(120, 244);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(125, 22);
-            this.lookUpEdit1.TabIndex = 13;
+            this.txtSatisFiyati.Location = new System.Drawing.Point(120, 175);
+            this.txtSatisFiyati.Name = "txtSatisFiyati";
+            this.txtSatisFiyati.Size = new System.Drawing.Size(125, 22);
+            this.txtSatisFiyati.TabIndex = 10;
             // 
-            // labelControl6
+            // labelControl4
             // 
-            this.labelControl6.Location = new System.Drawing.Point(32, 247);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(47, 16);
-            this.labelControl6.TabIndex = 14;
-            this.labelControl6.Text = "Kategori";
+            this.labelControl4.Location = new System.Drawing.Point(32, 181);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(62, 16);
+            this.labelControl4.TabIndex = 9;
+            this.labelControl4.Text = "Satış Fiyatı";
             // 
-            // btnKaydet
+            // txtAlisFiyati
             // 
-            this.btnKaydet.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage1")));
-            this.btnKaydet.Location = new System.Drawing.Point(60, 288);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(185, 39);
-            this.btnKaydet.TabIndex = 15;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.txtAlisFiyati.Location = new System.Drawing.Point(120, 137);
+            this.txtAlisFiyati.Name = "txtAlisFiyati";
+            this.txtAlisFiyati.Size = new System.Drawing.Size(125, 22);
+            this.txtAlisFiyati.TabIndex = 8;
             // 
-            // btnGuncelle
+            // labelControl3
             // 
-            this.btnGuncelle.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.btnGuncelle.Location = new System.Drawing.Point(60, 378);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(185, 39);
-            this.btnGuncelle.TabIndex = 16;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            this.labelControl3.Location = new System.Drawing.Point(32, 143);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(54, 16);
+            this.labelControl3.TabIndex = 7;
+            this.labelControl3.Text = "Alış Fiyatı";
             // 
-            // btnSil
+            // txtMarka
             // 
-            this.btnSil.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton3.ImageOptions.SvgImage")));
-            this.btnSil.Location = new System.Drawing.Point(60, 423);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(185, 39);
-            this.btnSil.TabIndex = 17;
-            this.btnSil.Text = "Sil";
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            this.txtMarka.Location = new System.Drawing.Point(120, 99);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.Size = new System.Drawing.Size(125, 22);
+            this.txtMarka.TabIndex = 6;
             // 
-            // btnListele
+            // labelControl2
             // 
-            this.btnListele.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.btnListele.Location = new System.Drawing.Point(60, 333);
-            this.btnListele.Name = "btnListele";
-            this.btnListele.Size = new System.Drawing.Size(185, 39);
-            this.btnListele.TabIndex = 18;
-            this.btnListele.Text = "Listele";
-            this.btnListele.Click += new System.EventHandler(this.btnListele_Click);
+            this.labelControl2.Location = new System.Drawing.Point(32, 105);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(35, 16);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Marka";
             // 
-            // txtID
+            // txtUrunAd
             // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(120, 33);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(125, 22);
-            this.txtID.TabIndex = 20;
+            this.txtUrunAd.Location = new System.Drawing.Point(120, 64);
+            this.txtUrunAd.Name = "txtUrunAd";
+            this.txtUrunAd.Size = new System.Drawing.Size(125, 22);
+            this.txtUrunAd.TabIndex = 4;
             // 
-            // labelControl7
+            // labelControl1
             // 
-            this.labelControl7.Location = new System.Drawing.Point(32, 39);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(43, 16);
-            this.labelControl7.TabIndex = 19;
-            this.labelControl7.Text = "Ürün ID";
+            this.labelControl1.Location = new System.Drawing.Point(32, 70);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(49, 16);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Ürün Adı";
             // 
             // FrmUrunListesi
             // 
@@ -277,13 +279,13 @@ namespace technical_service.Forms
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUrunAd.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyati.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyati.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStok.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStok.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSatisFiyati.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAlisFiyati.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMarka.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUrunAd.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
