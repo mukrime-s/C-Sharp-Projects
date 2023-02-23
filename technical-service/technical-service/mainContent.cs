@@ -23,5 +23,11 @@ namespace technical_service
             fu.MdiParent = this;
             fu.Show();
         }
+
+        private void btnYeniUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmYeniUrun fu = new Forms.FrmYeniUrun();
+            fu.Show();
+        }
     }
 }
