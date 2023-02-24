@@ -111,7 +111,7 @@ namespace technical_service.Forms
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(331, 644);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "groupControl1";
+            this.groupControl1.Text = "Ürün İşlemleri";
             // 
             // txtID
             // 
