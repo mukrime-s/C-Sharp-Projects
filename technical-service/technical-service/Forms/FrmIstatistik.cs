@@ -36,8 +36,8 @@ namespace technical_service.Forms
                                            orderby x.SATISFIYAT ascending
                                            select x.AD).FirstOrDefault();
             lblBeyazEsyaStokSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 4).ToString();
-            lblBilgisayarSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 1).ToString();
-            lblKucukEvAletleriSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 3).ToString();
+            lblKucukEvAletleriSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 1).ToString();
+            lblBilgisayarSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 3).ToString();
             lblToplamMarkaSayisi.Text = (from x in db.TBLURUN
                                          select x.MARKA).Distinct().Count().ToString();
 
