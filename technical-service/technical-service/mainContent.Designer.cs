@@ -38,15 +38,15 @@ namespace technical_service
             this.btnYeniUrun = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnIstatistik = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMarkaIstatistikleri = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnYeniCari = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCariListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCariIlIstatistigi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
@@ -115,15 +115,15 @@ namespace technical_service
             this.btnYeniUrun,
             this.barButtonItem5,
             this.btnIstatistik,
-            this.barButtonItem7,
+            this.btnMarkaIstatistikleri,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
-            this.barButtonItem3,
-            this.barButtonItem13,
-            this.barButtonItem14,
+            this.btnYeniCari,
+            this.btnCariListesi,
+            this.btnCariIlIstatistigi,
             this.barButtonItem15,
             this.barButtonItem16,
             this.barButtonItem17,
@@ -209,16 +209,17 @@ namespace technical_service
             // 
             this.btnIstatistik.Caption = "Ürün İstatistikleri";
             this.btnIstatistik.Id = 6;
-            this.btnIstatistik.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem6.ImageOptions.SvgImage")));
+            this.btnIstatistik.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIstatistik.ImageOptions.SvgImage")));
             this.btnIstatistik.Name = "btnIstatistik";
             this.btnIstatistik.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIstatistik_ItemClick);
             // 
-            // barButtonItem7
+            // btnMarkaIstatistikleri
             // 
-            this.barButtonItem7.Caption = "Marka İstatistikleri";
-            this.barButtonItem7.Id = 7;
-            this.barButtonItem7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem7.ImageOptions.SvgImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.btnMarkaIstatistikleri.Caption = "Marka İstatistikleri";
+            this.btnMarkaIstatistikleri.Id = 7;
+            this.btnMarkaIstatistikleri.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnMarkaIstatistikleri.ImageOptions.SvgImage")));
+            this.btnMarkaIstatistikleri.Name = "btnMarkaIstatistikleri";
+            this.btnMarkaIstatistikleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMarkaIstatistikleri_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -255,26 +256,29 @@ namespace technical_service
             this.barButtonItem12.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem12.ImageOptions.SvgImage")));
             this.barButtonItem12.Name = "barButtonItem12";
             // 
-            // barButtonItem3
+            // btnYeniCari
             // 
-            this.barButtonItem3.Caption = "Yeni Cari";
-            this.barButtonItem3.Id = 13;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btnYeniCari.Caption = "Yeni Cari";
+            this.btnYeniCari.Id = 13;
+            this.btnYeniCari.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
+            this.btnYeniCari.Name = "btnYeniCari";
+            this.btnYeniCari.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYeniCari_ItemClick);
             // 
-            // barButtonItem13
+            // btnCariListesi
             // 
-            this.barButtonItem13.Caption = "Cari Listesi";
-            this.barButtonItem13.Id = 14;
-            this.barButtonItem13.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem13.ImageOptions.SvgImage")));
-            this.barButtonItem13.Name = "barButtonItem13";
+            this.btnCariListesi.Caption = "Cari Listesi";
+            this.btnCariListesi.Id = 14;
+            this.btnCariListesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCariListesi.ImageOptions.SvgImage")));
+            this.btnCariListesi.Name = "btnCariListesi";
+            this.btnCariListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariListesi_ItemClick);
             // 
-            // barButtonItem14
+            // btnCariIlIstatistigi
             // 
-            this.barButtonItem14.Caption = "Cari İl İstatistiği";
-            this.barButtonItem14.Id = 15;
-            this.barButtonItem14.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem14.ImageOptions.SvgImage")));
-            this.barButtonItem14.Name = "barButtonItem14";
+            this.btnCariIlIstatistigi.Caption = "Cari İl İstatistiği";
+            this.btnCariIlIstatistigi.Id = 15;
+            this.btnCariIlIstatistigi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCariIlIstatistigi.ImageOptions.SvgImage")));
+            this.btnCariIlIstatistigi.Name = "btnCariIlIstatistigi";
+            this.btnCariIlIstatistigi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCariIlIstatistigi_ItemClick);
             // 
             // barButtonItem15
             // 
@@ -504,7 +508,7 @@ namespace technical_service
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btnIstatistik);
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnMarkaIstatistikleri);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "ribbonPageGroup12";
             // 
@@ -532,9 +536,9 @@ namespace technical_service
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnYeniCari);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCariListesi);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCariIlIstatistigi);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
@@ -678,7 +682,7 @@ namespace technical_service
         private DevExpress.XtraBars.BarButtonItem btnYeniUrun;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnIstatistik;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnMarkaIstatistikleri;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
@@ -708,9 +712,9 @@ namespace technical_service
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.BarButtonItem btnYeniCari;
+        private DevExpress.XtraBars.BarButtonItem btnCariListesi;
+        private DevExpress.XtraBars.BarButtonItem btnCariIlIstatistigi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;

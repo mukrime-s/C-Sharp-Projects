@@ -37,31 +37,5 @@ namespace technical_service.Forms
             dts.SaveChanges();
             MessageBox.Show("Ürün Kaydedilmiştir.");
         }
-
-
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUrunAdi_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureEdit7_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textEdit7_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -60,14 +60,14 @@ namespace technical_service.Forms
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.lblKucukEvAletleriSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.sdf = new DevExpress.XtraEditors.LabelControl();
             this.panel12 = new System.Windows.Forms.Panel();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.lblBilgisayarSayisi = new DevExpress.XtraEditors.LabelControl();
+            this.sfd = new DevExpress.XtraEditors.LabelControl();
             this.panel14 = new System.Windows.Forms.Panel();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -454,36 +454,36 @@ namespace technical_service.Forms
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(184)))), ((int)(((byte)(184)))));
-            this.panel11.Controls.Add(this.labelControl21);
             this.panel11.Controls.Add(this.lblKucukEvAletleriSayisi);
+            this.panel11.Controls.Add(this.sdf);
             this.panel11.Location = new System.Drawing.Point(1216, 516);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(283, 159);
             this.panel11.TabIndex = 20;
             // 
-            // labelControl21
-            // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Appearance.Options.UseForeColor = true;
-            this.labelControl21.Location = new System.Drawing.Point(24, 54);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(102, 45);
-            this.labelControl21.TabIndex = 1;
-            this.labelControl21.Text = "Klavye";
-            // 
             // lblKucukEvAletleriSayisi
             // 
-            this.lblKucukEvAletleriSayisi.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKucukEvAletleriSayisi.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKucukEvAletleriSayisi.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblKucukEvAletleriSayisi.Appearance.Options.UseFont = true;
             this.lblKucukEvAletleriSayisi.Appearance.Options.UseForeColor = true;
-            this.lblKucukEvAletleriSayisi.Location = new System.Drawing.Point(24, 25);
+            this.lblKucukEvAletleriSayisi.Location = new System.Drawing.Point(24, 54);
             this.lblKucukEvAletleriSayisi.Name = "lblKucukEvAletleriSayisi";
-            this.lblKucukEvAletleriSayisi.Size = new System.Drawing.Size(210, 23);
-            this.lblKucukEvAletleriSayisi.TabIndex = 0;
-            this.lblKucukEvAletleriSayisi.Text = "Küçük Ev Aletleri Stok Sayısı";
+            this.lblKucukEvAletleriSayisi.Size = new System.Drawing.Size(102, 45);
+            this.lblKucukEvAletleriSayisi.TabIndex = 1;
+            this.lblKucukEvAletleriSayisi.Text = "Klavye";
+            // 
+            // sdf
+            // 
+            this.sdf.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sdf.Appearance.ForeColor = System.Drawing.Color.White;
+            this.sdf.Appearance.Options.UseFont = true;
+            this.sdf.Appearance.Options.UseForeColor = true;
+            this.sdf.Location = new System.Drawing.Point(24, 25);
+            this.sdf.Name = "sdf";
+            this.sdf.Size = new System.Drawing.Size(210, 23);
+            this.sdf.TabIndex = 0;
+            this.sdf.Text = "Küçük Ev Aletleri Stok Sayısı";
             // 
             // panel12
             // 
@@ -522,36 +522,36 @@ namespace technical_service.Forms
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(156)))), ((int)(((byte)(18)))));
-            this.panel13.Controls.Add(this.labelControl25);
             this.panel13.Controls.Add(this.lblBilgisayarSayisi);
+            this.panel13.Controls.Add(this.sfd);
             this.panel13.Location = new System.Drawing.Point(914, 516);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(283, 159);
             this.panel13.TabIndex = 19;
             // 
-            // labelControl25
-            // 
-            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl25.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Appearance.Options.UseForeColor = true;
-            this.labelControl25.Location = new System.Drawing.Point(24, 54);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(68, 45);
-            this.labelControl25.TabIndex = 1;
-            this.labelControl25.Text = "Fırın";
-            // 
             // lblBilgisayarSayisi
             // 
-            this.lblBilgisayarSayisi.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBilgisayarSayisi.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBilgisayarSayisi.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblBilgisayarSayisi.Appearance.Options.UseFont = true;
             this.lblBilgisayarSayisi.Appearance.Options.UseForeColor = true;
-            this.lblBilgisayarSayisi.Location = new System.Drawing.Point(24, 25);
+            this.lblBilgisayarSayisi.Location = new System.Drawing.Point(24, 54);
             this.lblBilgisayarSayisi.Name = "lblBilgisayarSayisi";
-            this.lblBilgisayarSayisi.Size = new System.Drawing.Size(155, 23);
-            this.lblBilgisayarSayisi.TabIndex = 0;
-            this.lblBilgisayarSayisi.Text = "Bilgisayar Stok Sayısı";
+            this.lblBilgisayarSayisi.Size = new System.Drawing.Size(68, 45);
+            this.lblBilgisayarSayisi.TabIndex = 1;
+            this.lblBilgisayarSayisi.Text = "Fırın";
+            // 
+            // sfd
+            // 
+            this.sfd.Appearance.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sfd.Appearance.ForeColor = System.Drawing.Color.White;
+            this.sfd.Appearance.Options.UseFont = true;
+            this.sfd.Appearance.Options.UseForeColor = true;
+            this.sfd.Location = new System.Drawing.Point(24, 25);
+            this.sfd.Name = "sfd";
+            this.sfd.Size = new System.Drawing.Size(155, 23);
+            this.sfd.TabIndex = 0;
+            this.sfd.Text = "Bilgisayar Stok Sayısı";
             // 
             // panel14
             // 
@@ -896,14 +896,14 @@ namespace technical_service.Forms
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.LabelControl labelControl20;
         private System.Windows.Forms.Panel panel11;
-        private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl lblKucukEvAletleriSayisi;
+        private DevExpress.XtraEditors.LabelControl sdf;
         private System.Windows.Forms.Panel panel12;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private System.Windows.Forms.Panel panel13;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl lblBilgisayarSayisi;
+        private DevExpress.XtraEditors.LabelControl sfd;
         private System.Windows.Forms.Panel panel14;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.LabelControl labelControl28;

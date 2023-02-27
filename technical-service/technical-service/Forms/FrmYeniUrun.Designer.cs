@@ -86,7 +86,6 @@ namespace technical_service.Forms
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit1.Size = new System.Drawing.Size(99, 60);
             this.pictureEdit1.TabIndex = 0;
-            this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             // 
             // txtUrunAdi
             // 
@@ -103,7 +102,6 @@ namespace technical_service.Forms
             this.txtUrunAdi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.txtUrunAdi.Size = new System.Drawing.Size(268, 28);
             this.txtUrunAdi.TabIndex = 1;
-            this.txtUrunAdi.EditValueChanged += new System.EventHandler(this.txtUrunAdi_EditValueChanged);
             // 
             // panelControl1
             // 
@@ -115,7 +113,6 @@ namespace technical_service.Forms
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(250, 4);
             this.panelControl1.TabIndex = 2;
-            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // panelControl2
             // 
@@ -329,7 +326,6 @@ namespace technical_service.Forms
             this.pictureEdit7.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit7.Size = new System.Drawing.Size(124, 75);
             this.pictureEdit7.TabIndex = 16;
-            this.pictureEdit7.EditValueChanged += new System.EventHandler(this.pictureEdit7_EditValueChanged);
             // 
             // textEdit7
             // 
@@ -346,7 +342,6 @@ namespace technical_service.Forms
             this.textEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.textEdit7.Size = new System.Drawing.Size(316, 28);
             this.textEdit7.TabIndex = 17;
-            this.textEdit7.EditValueChanged += new System.EventHandler(this.textEdit7_EditValueChanged);
             // 
             // btnKaydet
             // 

@@ -33,11 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -64,6 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmCariIller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCariIller.Designer.cs">
+      <DependentUpon>FrmCariIller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCariListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCariListesi.Designer.cs">
+      <DependentUpon>FrmCariListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmIstatistik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +93,23 @@
     <Compile Include="Forms\FrmKategori.Designer.cs">
       <DependentUpon>FrmKategori.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmMarkalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMarkalar.Designer.cs">
+      <DependentUpon>FrmMarkalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmUrunListesi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmUrunListesi.Designer.cs">
       <DependentUpon>FrmUrunListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYeniCari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYeniCari.Designer.cs">
+      <DependentUpon>FrmYeniCari.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmYeniKategori.cs">
       <SubType>Form</SubType>
@@ -165,14 +194,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>teknikServisModel.edmx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\FrmCariIller.resx">
+      <DependentUpon>FrmCariIller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCariListesi.resx">
+      <DependentUpon>FrmCariListesi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmIstatistik.resx">
       <DependentUpon>FrmIstatistik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmKategori.resx">
       <DependentUpon>FrmKategori.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMarkalar.resx">
+      <DependentUpon>FrmMarkalar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUrunListesi.resx">
       <DependentUpon>FrmUrunListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYeniCari.resx">
+      <DependentUpon>FrmYeniCari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmYeniKategori.resx">
       <DependentUpon>FrmYeniKategori.cs</DependentUpon>

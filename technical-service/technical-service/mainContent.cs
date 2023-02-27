@@ -49,5 +49,32 @@ namespace technical_service
             fk.MdiParent = this;
             fk.Show();
         }
+
+        private void btnMarkaIstatistikleri_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmMarkalar fk = new Forms.FrmMarkalar();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnCariListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmCariListesi fk = new Forms.FrmCariListesi();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnCariIlIstatistigi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmCariIller fk = new Forms.FrmCariIller();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnYeniCari_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmYeniCari fk = new Forms.FrmYeniCari();
+            fk.Show();
+        }
     }
 }

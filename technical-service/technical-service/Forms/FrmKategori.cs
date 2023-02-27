@@ -20,7 +20,7 @@ namespace technical_service.Forms
 
         private void FrmKategori_Load(object sender, EventArgs e)
         {
-            var values = from k in dte.TBLURUN
+            var values = from k in dte.TBLKATEGORİ
                          select new
                          {
                              k.ID,
@@ -48,7 +48,7 @@ namespace technical_service.Forms
 
         private void btnListele_Click(object sender, EventArgs e)
         {
-            var values = from k in dte.TBLURUN
+            var values = from k in dte.TBLKATEGORİ
                          select new
                          {
                              k.ID,
