@@ -81,6 +81,12 @@
     <Compile Include="Forms\FrmCariListesi.Designer.cs">
       <DependentUpon>FrmCariListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDepartman.Designer.cs">
+      <DependentUpon>FrmDepartman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmIstatistik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     </Compile>
     <Compile Include="Forms\FrmKategori.Designer.cs">
       <DependentUpon>FrmKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmKurBilgisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmKurBilgisi.Designer.cs">
+      <DependentUpon>FrmKurBilgisi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMarkalar.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,12 @@
     <Compile Include="Forms\FrmYeniCari.Designer.cs">
       <DependentUpon>FrmYeniCari.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmYeniDepartman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYeniDepartman.Designer.cs">
+      <DependentUpon>FrmYeniDepartman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmYeniKategori.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +140,12 @@
     </Compile>
     <Compile Include="Forms\FrmYeniUrun.Designer.cs">
       <DependentUpon>FrmYeniUrun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.Designer.cs">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
     </Compile>
     <Compile Include="mainContent.cs">
       <SubType>Form</SubType>
@@ -200,11 +224,17 @@
     <EmbeddedResource Include="Forms\FrmCariListesi.resx">
       <DependentUpon>FrmCariListesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDepartman.resx">
+      <DependentUpon>FrmDepartman.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmIstatistik.resx">
       <DependentUpon>FrmIstatistik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmKategori.resx">
       <DependentUpon>FrmKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmKurBilgisi.resx">
+      <DependentUpon>FrmKurBilgisi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMarkalar.resx">
       <DependentUpon>FrmMarkalar.cs</DependentUpon>
@@ -215,11 +245,17 @@
     <EmbeddedResource Include="Forms\FrmYeniCari.resx">
       <DependentUpon>FrmYeniCari.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYeniDepartman.resx">
+      <DependentUpon>FrmYeniDepartman.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmYeniKategori.resx">
       <DependentUpon>FrmYeniKategori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmYeniUrun.resx">
       <DependentUpon>FrmYeniUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYoutube.resx">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainContent.resx">
       <DependentUpon>mainContent.cs</DependentUpon>
