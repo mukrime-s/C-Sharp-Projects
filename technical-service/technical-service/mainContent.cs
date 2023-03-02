@@ -76,5 +76,47 @@ namespace technical_service
             Forms.FrmYeniCari fk = new Forms.FrmYeniCari();
             fk.Show();
         }
+
+        private void btnDepartmanListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmDepartman fk = new Forms.FrmDepartman();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnYeniDepartman_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmYeniDepartman fk = new Forms.FrmYeniDepartman();
+            fk.Show();
+        }
+
+        private void btnHesapMakinesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("Calc.exe");
+        }
+
+        private void btnDovizKurları_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmKurBilgisi fk = new Forms.FrmKurBilgisi();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
+
+        private void btnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmYoutube fk = new Forms.FrmYoutube();
+            fk.MdiParent = this;
+            fk.Show();
+        }
     }
 }
