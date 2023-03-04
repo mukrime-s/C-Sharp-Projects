@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbTeknikServisModelStoreContainer" CdmEntityContainer="DbTeknikServisEntities">
+    <EntitySetMapping Name="TBLURUNTAKIP">
+      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUNTAKIP">
+        <MappingFragment StoreEntitySet="TBLURUNTAKIP">
+          <ScalarProperty Name="TAKIPID" ColumnName="TAKIPID" />
+          <ScalarProperty Name="URUN" ColumnName="URUN" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="TAKIPKODU" ColumnName="TAKIPKODU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
