@@ -42,7 +42,7 @@ namespace technical_service
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnQRKodOlustur = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.btnYeniCari = new DevExpress.XtraBars.BarButtonItem();
             this.btnCariListesi = new DevExpress.XtraBars.BarButtonItem();
@@ -114,7 +114,7 @@ namespace technical_service
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.barButtonItem11,
+            this.btnQRKodOlustur,
             this.barButtonItem12,
             this.btnYeniCari,
             this.btnCariListesi,
@@ -143,7 +143,7 @@ namespace technical_service
             this.barButtonItem37,
             this.barButtonItem38});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
             this.ribbonControl1.MaxItemId = 40;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -234,12 +234,13 @@ namespace technical_service
             this.barButtonItem10.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem10.ImageOptions.SvgImage")));
             this.barButtonItem10.Name = "barButtonItem10";
             // 
-            // barButtonItem11
+            // btnQRKodOlustur
             // 
-            this.barButtonItem11.Caption = "QR Kod Oluştur";
-            this.barButtonItem11.Id = 11;
-            this.barButtonItem11.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem11.ImageOptions.SvgImage")));
-            this.barButtonItem11.Name = "barButtonItem11";
+            this.btnQRKodOlustur.Caption = "QR Kod Oluştur";
+            this.btnQRKodOlustur.Id = 11;
+            this.btnQRKodOlustur.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem11.ImageOptions.SvgImage")));
+            this.btnQRKodOlustur.Name = "btnQRKodOlustur";
+            this.btnQRKodOlustur.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnQRKodOlustur_ItemClick);
             // 
             // barButtonItem12
             // 
@@ -339,7 +340,7 @@ namespace technical_service
             // 
             this.btnDepartmanListesi.Caption = "Departman Listesi";
             this.btnDepartmanListesi.Id = 25;
-            this.btnDepartmanListesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem24.ImageOptions.SvgImage")));
+            this.btnDepartmanListesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDepartmanListesi.ImageOptions.SvgImage")));
             this.btnDepartmanListesi.Name = "btnDepartmanListesi";
             this.btnDepartmanListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDepartmanListesi_ItemClick);
             // 
@@ -347,7 +348,7 @@ namespace technical_service
             // 
             this.btnYeniDepartman.Caption = "Yeni Departman";
             this.btnYeniDepartman.Id = 26;
-            this.btnYeniDepartman.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem25.ImageOptions.SvgImage")));
+            this.btnYeniDepartman.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnYeniDepartman.ImageOptions.SvgImage")));
             this.btnYeniDepartman.Name = "btnYeniDepartman";
             this.btnYeniDepartman.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYeniDepartman_ItemClick);
             // 
@@ -355,7 +356,7 @@ namespace technical_service
             // 
             this.btnHesapMakinesi.Caption = "Hesap Makinesi";
             this.btnHesapMakinesi.Id = 27;
-            this.btnHesapMakinesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem26.ImageOptions.SvgImage")));
+            this.btnHesapMakinesi.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHesapMakinesi.ImageOptions.SvgImage")));
             this.btnHesapMakinesi.Name = "btnHesapMakinesi";
             this.btnHesapMakinesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHesapMakinesi_ItemClick);
             // 
@@ -363,7 +364,7 @@ namespace technical_service
             // 
             this.btnDovizKurları.Caption = "Döviz Kurları";
             this.btnDovizKurları.Id = 29;
-            this.btnDovizKurları.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem28.ImageOptions.SvgImage")));
+            this.btnDovizKurları.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDovizKurları.ImageOptions.SvgImage")));
             this.btnDovizKurları.Name = "btnDovizKurları";
             this.btnDovizKurları.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDovizKurları_ItemClick);
             // 
@@ -371,7 +372,7 @@ namespace technical_service
             // 
             this.btnYoutube.Caption = "Youtube";
             this.btnYoutube.Id = 30;
-            this.btnYoutube.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem29.ImageOptions.SvgImage")));
+            this.btnYoutube.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnYoutube.ImageOptions.SvgImage")));
             this.btnYoutube.Name = "btnYoutube";
             this.btnYoutube.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnYoutube_ItemClick);
             // 
@@ -386,7 +387,7 @@ namespace technical_service
             // 
             this.btnWord.Caption = "Word";
             this.btnWord.Id = 32;
-            this.btnWord.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem31.ImageOptions.SvgImage")));
+            this.btnWord.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnWord.ImageOptions.SvgImage")));
             this.btnWord.Name = "btnWord";
             this.btnWord.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWord_ItemClick);
             // 
@@ -394,7 +395,7 @@ namespace technical_service
             // 
             this.btnExcel.Caption = "Excel";
             this.btnExcel.Id = 33;
-            this.btnExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem32.ImageOptions.SvgImage")));
+            this.btnExcel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnExcel.ImageOptions.SvgImage")));
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnExcel_ItemClick);
             // 
@@ -495,7 +496,7 @@ namespace technical_service
             // 
             // ribbonPageGroup14
             // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup14.ItemLinks.Add(this.btnQRKodOlustur);
             this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             this.ribbonPageGroup14.Text = "ribbonPageGroup14";
@@ -650,7 +651,7 @@ namespace technical_service
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem btnQRKodOlustur;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;

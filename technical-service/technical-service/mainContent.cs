@@ -118,5 +118,11 @@ namespace technical_service
             fk.MdiParent = this;
             fk.Show();
         }
+
+        private void btnQRKodOlustur_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmQRCode fk = new Forms.FrmQRCode();
+            fk.Show();
+        }
     }
 }
