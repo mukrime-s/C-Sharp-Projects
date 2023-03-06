@@ -6,9 +6,29 @@
         <MappingFragment StoreEntitySet="TBLURUNTAKIP">
           <ScalarProperty Name="TAKIPID" ColumnName="TAKIPID" />
           <ScalarProperty Name="URUN" ColumnName="URUN" />
-          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
           <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-          <ScalarProperty Name="TAKIPKODU" ColumnName="TAKIPKODU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLHAKKIMIZDA">
+      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLHAKKIMIZDA">
+        <MappingFragment StoreEntitySet="TBLHAKKIMIZDA">
+          <ScalarProperty Name="METIN" ColumnName="METIN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLURUN">
+      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUN">
+        <MappingFragment StoreEntitySet="TBLURUN">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+          <ScalarProperty Name="STOK" ColumnName="STOK" />
+          <ScalarProperty Name="SATISFIYAT" ColumnName="SATISFIYAT" />
+          <ScalarProperty Name="ALISFIYAT" ColumnName="ALISFIYAT" />
+          <ScalarProperty Name="MARKA" ColumnName="MARKA" />
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

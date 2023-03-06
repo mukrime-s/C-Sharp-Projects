@@ -1,4 +1,4 @@
-﻿
+﻿<%@ Register Assembly="DevExpress.Web.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -60,154 +60,85 @@
                 <div class="mx-auto text-center">
                     <h1 style="color:brown;font-weight:bolder" >En uygun fiyatlar ve en uygun yüzlerce ürün bir yanı başınızda.</h1>
 					<p class="banp mx-auto mt-3"style="color:brown;font-weight:bolder">Yüzlerce farklı ürünle karşınızdayız  </p>
-					<a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button"style="color:brown;font-weight:bolder">Detaylar</a>
+					<a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button"style="color:brown;font-weight:bolder;background-color:white">Detaylar</a>
                 </div>
             </div>
         </div>
+      </div>
 				<!-- about -->
 <section class="slide-wrapper" id="about">
 	<h3 class="w3_head mb-5">Hakkımızda </h3>
 	<img src="images/1.jpg" class="img-fluid" alt="">
 	<p class="iner mt-5">
-        <asp:Repeater ID="Repeater2" runat="server">
+        <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
-                <%#Eval("METIN") %>
+                <%# Eval("METIN")%>
             </ItemTemplate>
         </asp:Repeater>
+        Bu proje Şubat 2023 tarihinde başlayıp Mart 2023 tarihinde bitirilmiştir.Platform olarak aspnet web form ,master page;tasarım kısmında ise boostrap html5 ve css eklentileri kullanılmıştır.Proje masaüstü olarak c# ve DevExpress te yürütülmüştür.Projede ürün satışı ve takibi yapılmaktadır.
 	</p>
 </section>
-<!-- //about -->
-		<!-- news -->
+<!-- //product -->
        <div class="news" id="gallery">
 		<div class="text-center">
-			<h2 class="w3_head">Gallery</h2>
-				<p class="main_p mb-5  text-center mx-auto">Nulla pellentesque mi non laoreet eleifend. Integer porttitor mollisar curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis.</p>
-		</div>
-			<div class="row news-grids">
-				<div class="col-md-4 news-grids-left">
-					<div class="news_top">
-						<a href="#gal1"><img src="images/g1.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-					<div class="news_top mt-5">
-						<a href="#gal2"><img src="images/g2.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-				</div>
-				<div class="col-md-4 news-grids-middle">
-					<div class="news_top">
-						<a href="#gal3"><img src="images/about.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-					<div class="news_top mt-5">
-						<a href="#gal4"><img src="images/g3.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-				</div>
-				<div class="col-md-4 news-grids-right">
-					<div class="news_top">
-						<a href="#gal5"><img src="images/g4.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-					<div class="news_top mt-5">
-						<a href="#gal6"><img src="images/g5.jpg" alt="news image" class="img-fluid"></a>
-						<h4>Nulla pellentesque</h4>
-					</div>
-				</div>
-			
+			<h2 class="w3_head">Ürünler</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>ÜRÜN ADI</th>
+                    <th>MARKA</th>
+                    <th>SATIŞ FİYATI</th>
+                </tr>
+                <tr>
+                    <asp:Repeater ID="Repeater2" runat="server">
+                        <ItemTemplate>
+                            <tr>
+                                <td><%# Eval("ID") %></td>
+                                <td><%# Eval("AD") %></td>
+                                <td><%# Eval("MARKA") %></td>
+                                <td><%# Eval("SATISFIYAT") %></td>
+                            </tr>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </tr>
+            </table>
 				
-			</div>	
 		</div>
-		<!-- popup-->
-        <div id="gal1" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/g1.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup -->
-
-        <!-- popup-->
-        <div id="gal2" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/g2.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup -->
-        <!-- popup-->
-        <div id="gal3" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/about.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup3 -->
-        <!-- popup-->
-        <div id="gal4" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/g3.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup -->
-        <!-- popup-->
-        <div id="gal5" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/g4.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup -->
-        <!-- popup-->
-        <div id="gal6" class="pop-overlay animate">
-            <div class="popup">
-                <img src="images/g5.jpg" alt="Popup Image" class="img-fluid" />
-                <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat dolor.</p>
-                <a class="close" href="#gallery">&times;</a>
-            </div>
-        </div>
-        <!-- //popup -->
-
-<!-- //news -->
+			
 
  <!--services-->
     <div class="wthree_pvtits-services align-w3" id="services">
         <div class="container">
             <div class="wthree_pvt_title text-center">
-                <h3 class="w3_head">services
+                <h3 class="w3_head">Teknik Servis
                 </h3>
-                <p class="main_p mb-5  text-center mx-auto">Nulla pellentesque mi non laoreet eleifend. Integer porttitor mollisar curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis.</p>
+                <p class="main_p mb-5  text-center mx-auto">Mağazamızdan almış olduğunuz her ürün için teknik bir aksaklık olması durumda 2 yıla kadar ücret talep etmeden onarma ve bakım işlemleri gerçekleştirilir.</p>
+                <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#WebForm1.Aspx" role="button"style="color:purple;font-weight:bolder;background-color:aqua">Arızalı Ürün Takibi</a>
             </div>
             <div class="wthree_pvtits-services-row row">
                 <div class="col-lg-4 col-md-6 wthree_sgrid py-sm-5 py-4">
                     <span class="fa fa-cog p-sm-4 p-2"></span>
-                    <h4 class="my-3">Lorem ipsum dolor </h4>
+                    <h4 class="my-3">Hızlı Teknik Servis </h4>
                 </div>
                 <div class="col-lg-4 col-md-6 wthree_sgrid  py-sm-5 py-4">
                     <span class="fa fa-refresh p-sm-4 p-2"></span>
-                    <h4 class="my-3"> sit amet sed diam nonumy </h4>
+                    <h4 class="my-3"> Arıza Durum Sorgulama </h4>
                 </div>
                 <div class="col-lg-4 col-md-6 wthree_sgrid  py-sm-5 py-4">
                     <span class="fa fa-camera p-sm-4 p-2"></span>
-                    <h4 class="my-3">eirmod tempor invidunt</h4>
+                    <h4 class="my-3">Güvenilir Teslimat</h4>
                 </div>
                 <div class="col-lg-4 col-md-6 wthree_sgrid   py-sm-5 py-4">
                     <span class="fa fa-bell-o p-sm-4 p-2"></span>
-                    <h4 class="my-3"> ut labore et dolore </h4>
+                    <h4 class="my-3"> 2 Yıl Ürün Garantisi</h4>
                 </div>
                 <div class="col-lg-4 col-md-6  wthree_sgrid  py-sm-5 py-4">
                     <span class="fa fa fa-smile-o p-sm-4 p-2"></span>
-                    <h4 class="my-3">magna aliquyam erat</h4>
+                    <h4 class="my-3">%95 Memnuniyet</h4>
                 </div>
                 <div class="col-lg-4 col-md-6  wthree_sgrid   py-sm-5 py-4">
                     <span class="fa fa-plus-square-o  p-sm-4 p-2"></span>
-                    <h4 class="my-3">At vero eos et accusam</h4>
+                    <h4 class="my-3">Yüzlerce Kategori</h4>
                 </div>
             </div>
         </div>
@@ -218,21 +149,21 @@
 
 <!-- contact -->
 	 <section class="wedo" id="contact">
-			<h3 class="w3_head mb-5">Contact </h3>
-		   <p class="main_p mb-5  text-center mx-auto">Nulla pellentesque mi non laoreet eleifend. Integer porttitor mollisar curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus sit arcu sociis.</p>
+			<h3 class="w3_head mb-5">Bize Ulaşın</h3>
+		   <p class="main_p mb-5  text-center mx-auto">Mağamızdan aldığınız ürünün herhangi bir kusurunun olması durumunda aşağıdaki bilgileri doldurarak kayıt oluşturabilirsiniz. Size en kısa sürede dönüş sağlayacağız.</p>
 		   <div class="contact_grid_right mt-5 mx-auto text-center">
-				<form action="#" method="post">
+				<form action="#" method="post" runat="server">
 					<div class="row contact_top">
 						<div class="col-sm-6">
-							<input type="text" name="Name" placeholder="Name" required="">
+							<asp:TextBox ID="TextBox1" runat="server" placeholder="Adınız"></asp:TextBox>
 						</div>
 						<div class="col-sm-6">
-							<input type="email" name="Email" placeholder="Email" required="">
+							<asp:TextBox ID="TextBox2" runat="server" placeholder="Mail Adresiniz"></asp:TextBox>
 						</div>
 					</div>	
-						<input type="text" name="Name" placeholder="Name" required="">
-						<textarea name="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-						<input type="submit" value="Send Message">
+						<asp:TextBox ID="TextBox3" runat="server" placeholder="Konu"></asp:TextBox>
+                            <asp:TextBox ID="TextBox4" runat="server" placeholder="Mesajınız" TextMode="MultiLine" Height="50"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="Gönder" />
 				</form>
 			</div>
 			<div class="cpy-right text-center">

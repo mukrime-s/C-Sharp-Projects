@@ -17,5 +17,7 @@ namespace tecnical_service_web.Entity
         public int TAKIPID { get; set; }
         public Nullable<int> URUN { get; set; }
         public Nullable<int> TARIH { get; set; }
+    
+        public virtual TBLURUN TBLURUN { get; set; }
     }
 }
