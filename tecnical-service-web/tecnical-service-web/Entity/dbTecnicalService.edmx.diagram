@@ -5,7 +5,8 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9ba566ffa9654672b7202f3bbb5aae50" Name="Diagram1">
-        <EntityTypeShape EntityType="DbTeknikServisModel.TBLURUNTAKIP" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknikServisModel.TBLURUNTAKIP" Width="2.125" PointX="0.875" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" Width="1.5" PointX="4.5" PointY="2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

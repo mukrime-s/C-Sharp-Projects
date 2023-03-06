@@ -12,10 +12,9 @@ namespace tecnical_service_web.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TBLURUNTAKIP
+    public partial class TBLHAKKIMIZDA
     {
-        public int TAKIPID { get; set; }
-        public Nullable<int> URUN { get; set; }
-        public Nullable<int> TARIH { get; set; }
+        public byte ID { get; set; }
+        public string METIN { get; set; }
     }
 }

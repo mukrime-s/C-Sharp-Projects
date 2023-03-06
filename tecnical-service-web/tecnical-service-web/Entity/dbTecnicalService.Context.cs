@@ -26,5 +26,6 @@ namespace tecnical_service_web.Entity
         }
     
         public virtual DbSet<TBLURUNTAKIP> TBLURUNTAKIP { get; set; }
+        public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
     }
 }
