@@ -19,9 +19,9 @@ namespace tecnical_service_web
         
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var value = db.TBLURUNTAKIP.Where(x => x.SERINO == TextBox1.Text);//SERİ NUMARASINA GÖRE VERİLER CEKİLDİ
-            Repeater1.DataSource = value.ToList();
-            Repeater1.DataBind();//veriyi baglamak icin olusturuldu.
+            //var value = db.TBLURUNTAKIP.Where(x => x.SERINO == TextBox1.Text);//SERİ NUMARASINA GÖRE VERİLER CEKİLDİ
+           // Repeater1.DataSource = value.ToList();
+            //Repeater1.DataBind();//veriyi baglamak icin olusturuldu.
         }
     }
 }

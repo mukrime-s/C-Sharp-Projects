@@ -1,16 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DbTeknikServisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TBLHAKKIMIZDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="METIN" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TBLURUN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AD" Type="varchar" MaxLength="50" />
+    <Property Name="MARKA" Type="varchar" MaxLength="50" />
+    <Property Name="ALISFIYAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SATISFIYAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="STOK" Type="smallint" />
+    <Property Name="KATEGORI" Type="tinyint" />
+    <Property Name="DURUM" Type="bit" />
+  </EntityType>
   <EntityType Name="TBLURUNTAKIP">
     <Key>
       <PropertyRef Name="TAKIPID" />
     </Key>
     <Property Name="TAKIPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="URUN" Type="int" />
-    <Property Name="DURUM" Type="varchar" MaxLength="250" />
+    <Property Name="ACIKLAMA" Type="varchar" MaxLength="250" />
     <Property Name="TARIH" Type="int" />
-    <Property Name="TAKIPKODU" Type="char" MaxLength="5" />
+    <Property Name="SERINO" Type="char" MaxLength="5" />
   </EntityType>
+  <Association Name="FK_TBLURUNTAKIP_TBLURUN">
+    <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
+    <End Role="TBLURUNTAKIP" Type="Self.TBLURUNTAKIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLURUNTAKIP">
+        <PropertyRef Name="URUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DbTeknikServisModelStoreContainer">
+    <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLURUNTAKIP" EntityType="Self.TBLURUNTAKIP" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLURUNTAKIP_TBLURUN" Association="Self.FK_TBLURUNTAKIP_TBLURUN">
+      <End Role="TBLURUN" EntitySet="TBLURUN" />
+      <End Role="TBLURUNTAKIP" EntitySet="TBLURUNTAKIP" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

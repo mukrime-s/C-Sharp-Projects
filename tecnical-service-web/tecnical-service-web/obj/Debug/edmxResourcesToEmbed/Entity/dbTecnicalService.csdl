@@ -6,11 +6,49 @@
     </Key>
     <Property Name="TAKIPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="URUN" Type="Int32" />
-    <Property Name="DURUM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Name="TARIH" Type="Int32" />
-    <Property Name="TAKIPKODU" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="TBLURUN" Relationship="DbTeknikServisModel.FK_TBLURUNTAKIP_TBLURUN" FromRole="TBLURUNTAKIP" ToRole="TBLURUN" />
   </EntityType>
   <EntityContainer Name="DbTeknikServisEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TBLURUNTAKIP" EntityType="Self.TBLURUNTAKIP" />
+    <EntitySet Name="TBLHAKKIMIZDA" EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" />
+    <EntitySet Name="TBLURUN" EntityType="DbTeknikServisModel.TBLURUN" />
+    <AssociationSet Name="FK_TBLURUNTAKIP_TBLURUN" Association="DbTeknikServisModel.FK_TBLURUNTAKIP_TBLURUN">
+      <End Role="TBLURUN" EntitySet="TBLURUN" />
+      <End Role="TBLURUNTAKIP" EntitySet="TBLURUNTAKIP" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="TBLHAKKIMIZDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="METIN" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBLURUN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MARKA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ALISFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SATISFIYAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="STOK" Type="Int16" />
+    <Property Name="KATEGORI" Type="Byte" />
+    <Property Name="DURUM" Type="Boolean" />
+    <NavigationProperty Name="TBLURUNTAKIP" Relationship="DbTeknikServisModel.FK_TBLURUNTAKIP_TBLURUN" FromRole="TBLURUN" ToRole="TBLURUNTAKIP" />
+  </EntityType>
+  <Association Name="FK_TBLURUNTAKIP_TBLURUN">
+    <End Type="DbTeknikServisModel.TBLURUN" Role="TBLURUN" Multiplicity="0..1" />
+    <End Type="DbTeknikServisModel.TBLURUNTAKIP" Role="TBLURUNTAKIP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLURUN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TBLURUNTAKIP">
+        <PropertyRef Name="URUN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -7,6 +7,8 @@
       <Diagram DiagramId="9ba566ffa9654672b7202f3bbb5aae50" Name="Diagram1">
         <EntityTypeShape EntityType="DbTeknikServisModel.TBLURUNTAKIP" Width="2.125" PointX="0.875" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" Width="1.5" PointX="4.5" PointY="2" />
+        <EntityTypeShape EntityType="DbTeknikServisModel.TBLURUN" Width="1.5" PointX="0.875" PointY="6.75" />
+        <AssociationConnector Association="DbTeknikServisModel.FK_TBLURUNTAKIP_TBLURUN" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
