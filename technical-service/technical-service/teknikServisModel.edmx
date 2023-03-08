@@ -101,6 +101,23 @@
           <Property Name="TARIH" Type="smalldatetime" />
           <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
+        <EntityType Name="TBLHAKKIMIZDA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="METIN" Type="varchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="TBLILETISIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ADSOYAD" Type="varchar" MaxLength="50" />
+          <Property Name="MAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="KONU" Type="varchar" MaxLength="50" />
+          <Property Name="MESAJ" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="TBLKATEGORİ">
           <Key>
             <PropertyRef Name="ID" />
@@ -164,16 +181,6 @@
           <Property Name="GELISTARIHI" Type="smalldatetime" />
           <Property Name="CIKISTARIHI" Type="smalldatetime" />
           <Property Name="URUNSERINO" Type="char" MaxLength="5" />
-        </EntityType>
-        <EntityType Name="TBLURUNTAKIP">
-          <Key>
-            <PropertyRef Name="TAKIPID" />
-          </Key>
-          <Property Name="TAKIPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="URUN" Type="int" />
-          <Property Name="DURUM" Type="varchar" MaxLength="250" />
-          <Property Name="TARIH" Type="int" />
-          <Property Name="TAKIPKODU" Type="char" MaxLength="5" />
         </EntityType>
         <Association Name="FK_TBLFATURABILGI_TBLCARI">
           <End Role="TBLCARI" Type="Self.TBLCARI" Multiplicity="0..1" />
@@ -295,18 +302,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBLURUNTAKIP_TBLURUN">
-          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
-          <End Role="TBLURUNTAKIP" Type="Self.TBLURUNTAKIP" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBLURUN">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="TBLURUNTAKIP">
-              <PropertyRef Name="URUN" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DbTeknikServisModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
@@ -317,13 +312,14 @@
           <EntitySet Name="TBLFATURABILGI" EntityType="Self.TBLFATURABILGI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLFATURADETAY" EntityType="Self.TBLFATURADETAY" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLGIDER" EntityType="Self.TBLGIDER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKATEGORİ" EntityType="Self.TBLKATEGORİ" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLNOT" EntityType="Self.TBLNOT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLURUNHAREKET" EntityType="Self.TBLURUNHAREKET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLURUNKABUL" EntityType="Self.TBLURUNKABUL" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TBLURUNTAKIP" EntityType="Self.TBLURUNTAKIP" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TBLFATURABILGI_TBLCARI" Association="Self.FK_TBLFATURABILGI_TBLCARI">
             <End Role="TBLCARI" EntitySet="TBLCARI" />
             <End Role="TBLFATURABILGI" EntitySet="TBLFATURABILGI" />
@@ -363,10 +359,6 @@
           <AssociationSet Name="FK_TBLURUNKABUL_TBLPERSONEL" Association="Self.FK_TBLURUNKABUL_TBLPERSONEL">
             <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
             <End Role="TBLURUNKABUL" EntitySet="TBLURUNKABUL" />
-          </AssociationSet>
-          <AssociationSet Name="FK_TBLURUNTAKIP_TBLURUN" Association="Self.FK_TBLURUNTAKIP_TBLURUN">
-            <End Role="TBLURUN" EntitySet="TBLURUN" />
-            <End Role="TBLURUNTAKIP" EntitySet="TBLURUNTAKIP" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -523,7 +515,6 @@
           <Property Name="DURUM" Type="Boolean" />
           <NavigationProperty Name="TBLKATEGORİ" Relationship="Self.FK_TBLURUN_TBLKATEGORİ" FromRole="TBLURUN" ToRole="TBLKATEGORİ" />
           <NavigationProperty Name="TBLURUNHAREKET" Relationship="Self.FK_TBLURUNHAREKET_TBLURUN" FromRole="TBLURUN" ToRole="TBLURUNHAREKET" />
-          <NavigationProperty Name="TBLURUNTAKIP" Relationship="Self.FK_TBLURUNTAKIP_TBLURUN" FromRole="TBLURUN" ToRole="TBLURUNTAKIP" />
         </EntityType>
         <EntityType Name="TBLURUNHAREKET">
           <Key>
@@ -553,17 +544,6 @@
           <NavigationProperty Name="TBLCARI" Relationship="Self.FK_TBLURUNKABUL_TBLCARI" FromRole="TBLURUNKABUL" ToRole="TBLCARI" />
           <NavigationProperty Name="TBLPERSONEL" Relationship="Self.FK_TBLURUNKABUL_TBLPERSONEL" FromRole="TBLURUNKABUL" ToRole="TBLPERSONEL" />
           <Property Name="URUNSERINO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="TBLURUNTAKIP">
-          <Key>
-            <PropertyRef Name="TAKIPID" />
-          </Key>
-          <Property Name="TAKIPID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="URUN" Type="Int32" />
-          <Property Name="DURUM" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="TARIH" Type="Int32" />
-          <Property Name="TAKIPKODU" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="TBLURUN" Relationship="Self.FK_TBLURUNTAKIP_TBLURUN" FromRole="TBLURUNTAKIP" ToRole="TBLURUN" />
         </EntityType>
         <Association Name="FK_TBLFATURABILGI_TBLCARI">
           <End Role="TBLCARI" Type="Self.TBLCARI" Multiplicity="0..1" />
@@ -685,18 +665,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TBLURUNTAKIP_TBLURUN">
-          <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
-          <End Role="TBLURUNTAKIP" Type="Self.TBLURUNTAKIP" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TBLURUN">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="TBLURUNTAKIP">
-              <PropertyRef Name="URUN" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DbTeknikServisEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" />
@@ -713,7 +681,6 @@
           <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" />
           <EntitySet Name="TBLURUNHAREKET" EntityType="Self.TBLURUNHAREKET" />
           <EntitySet Name="TBLURUNKABUL" EntityType="Self.TBLURUNKABUL" />
-          <EntitySet Name="TBLURUNTAKIP" EntityType="Self.TBLURUNTAKIP" />
           <AssociationSet Name="FK_TBLFATURABILGI_TBLCARI" Association="Self.FK_TBLFATURABILGI_TBLCARI">
             <End Role="TBLCARI" EntitySet="TBLCARI" />
             <End Role="TBLFATURABILGI" EntitySet="TBLFATURABILGI" />
@@ -754,11 +721,26 @@
             <End Role="TBLURUN" EntitySet="TBLURUN" />
             <End Role="TBLURUNHAREKET" EntitySet="TBLURUNHAREKET" />
           </AssociationSet>
-          <AssociationSet Name="FK_TBLURUNTAKIP_TBLURUN" Association="Self.FK_TBLURUNTAKIP_TBLURUN">
-            <End Role="TBLURUN" EntitySet="TBLURUN" />
-            <End Role="TBLURUNTAKIP" EntitySet="TBLURUNTAKIP" />
-          </AssociationSet>
+          <EntitySet Name="TBLHAKKIMIZDA" EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" />
+          <EntitySet Name="TBLILETISIM" EntityType="DbTeknikServisModel.TBLILETISIM" />
         </EntityContainer>
+        <EntityType Name="TBLHAKKIMIZDA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="METIN" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBLILETISIM">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ADSOYAD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MESAJ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -940,14 +922,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TBLURUNTAKIP">
-            <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUNTAKIP">
-              <MappingFragment StoreEntitySet="TBLURUNTAKIP">
-                <ScalarProperty Name="TAKIPID" ColumnName="TAKIPID" />
-                <ScalarProperty Name="URUN" ColumnName="URUN" />
-                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
-                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-                <ScalarProperty Name="TAKIPKODU" ColumnName="TAKIPKODU" />
+          <EntitySetMapping Name="TBLHAKKIMIZDA">
+            <EntityTypeMapping TypeName="DbTeknikServisModel.TBLHAKKIMIZDA">
+              <MappingFragment StoreEntitySet="TBLHAKKIMIZDA">
+                <ScalarProperty Name="METIN" ColumnName="METIN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBLILETISIM">
+            <EntityTypeMapping TypeName="DbTeknikServisModel.TBLILETISIM">
+              <MappingFragment StoreEntitySet="TBLILETISIM">
+                <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+                <ScalarProperty Name="KONU" ColumnName="KONU" />
+                <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+                <ScalarProperty Name="ADSOYAD" ColumnName="ADSOYAD" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

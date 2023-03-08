@@ -153,6 +153,7 @@
     <EntitySetMapping Name="TBLURUNHAREKET">
       <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUNHAREKET">
         <MappingFragment StoreEntitySet="TBLURUNHAREKET">
+          <ScalarProperty Name="URUNSERINO" ColumnName="URUNSERINO" />
           <ScalarProperty Name="HAREKETID" ColumnName="HAREKETID" />
           <ScalarProperty Name="URUN" ColumnName="URUN" />
           <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
@@ -166,8 +167,8 @@
     <EntitySetMapping Name="TBLURUNKABUL">
       <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUNKABUL">
         <MappingFragment StoreEntitySet="TBLURUNKABUL">
+          <ScalarProperty Name="URUNSERINO" ColumnName="URUNSERINO" />
           <ScalarProperty Name="ISLEMID" ColumnName="ISLEMID" />
-          <ScalarProperty Name="URUN" ColumnName="URUN" />
           <ScalarProperty Name="CARI" ColumnName="CARI" />
           <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
           <ScalarProperty Name="GELISTARIHI" ColumnName="GELISTARIHI" />
@@ -175,14 +176,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TBLURUNTAKIP">
-      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLURUNTAKIP">
-        <MappingFragment StoreEntitySet="TBLURUNTAKIP">
-          <ScalarProperty Name="TAKIPID" ColumnName="TAKIPID" />
-          <ScalarProperty Name="URUN" ColumnName="URUN" />
-          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
-          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
-          <ScalarProperty Name="TAKIPKODU" ColumnName="TAKIPKODU" />
+    <EntitySetMapping Name="TBLHAKKIMIZDA">
+      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLHAKKIMIZDA">
+        <MappingFragment StoreEntitySet="TBLHAKKIMIZDA">
+          <ScalarProperty Name="METIN" ColumnName="METIN" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBLILETISIM">
+      <EntityTypeMapping TypeName="DbTeknikServisModel.TBLILETISIM">
+        <MappingFragment StoreEntitySet="TBLILETISIM">
+          <ScalarProperty Name="MESAJ" ColumnName="MESAJ" />
+          <ScalarProperty Name="KONU" ColumnName="KONU" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="ADSOYAD" ColumnName="ADSOYAD" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
