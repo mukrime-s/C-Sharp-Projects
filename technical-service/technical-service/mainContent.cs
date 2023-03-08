@@ -124,5 +124,18 @@ namespace technical_service
             Forms.FrmQRCode fk = new Forms.FrmQRCode();
             fk.Show();
         }
+
+        private void btnHaritalar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmHaritalar fk = new Forms.FrmHaritalar();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnRaporlar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmRapor fk = new Forms.FrmRapor();
+            fk.Show();
+        }
     }
 }

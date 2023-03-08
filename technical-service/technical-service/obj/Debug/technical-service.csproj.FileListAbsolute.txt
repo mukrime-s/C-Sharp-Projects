@@ -328,3 +328,14 @@ C:\Users\Mukoo\Desktop\BACKUP\technical-service\technical-service\obj\Debug\tech
 C:\Users\Mukoo\Desktop\BACKUP\technical-service\technical-service\obj\Debug\technical-service.csproj.CopyComplete
 C:\Users\Mukoo\Desktop\BACKUP\technical-service\technical-service\obj\Debug\technical-service.exe
 C:\Users\Mukoo\Desktop\BACKUP\technical-service\technical-service\obj\Debug\technical-service.pdb
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\obj\Debug\technical_service.Forms.FrmQRCode.resources
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\DevExpress.Map.v20.1.Core.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\DevExpress.XtraMap.v20.1.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\DevExpress.Map.v20.1.Core.xml
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\DevExpress.XtraMap.v20.1.xml
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\de\DevExpress.Map.v20.1.Core.resources.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\es\DevExpress.Map.v20.1.Core.resources.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\ja\DevExpress.Map.v20.1.Core.resources.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\bin\Debug\ru\DevExpress.Map.v20.1.Core.resources.dll
+C:\Users\Mukoo\source\repos\technical-service\technical-service\obj\Debug\technical_service.Forms.FrmHaritalar.resources

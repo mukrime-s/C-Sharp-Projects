@@ -96,6 +96,23 @@
     <Property Name="TARIH" Type="smalldatetime" />
     <Property Name="TUTAR" Type="decimal" Precision="18" Scale="2" />
   </EntityType>
+  <EntityType Name="TBLHAKKIMIZDA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="METIN" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TBLILETISIM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADSOYAD" Type="varchar" MaxLength="50" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="KONU" Type="varchar" MaxLength="50" />
+    <Property Name="MESAJ" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="TBLKATEGORİ">
     <Key>
       <PropertyRef Name="ID" />
@@ -147,27 +164,18 @@
     <Property Name="TARIH" Type="smalldatetime" />
     <Property Name="ADET" Type="smallint" />
     <Property Name="FIYAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="URUNSERINO" Type="char" MaxLength="5" />
   </EntityType>
   <EntityType Name="TBLURUNKABUL">
     <Key>
       <PropertyRef Name="ISLEMID" />
     </Key>
     <Property Name="ISLEMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="URUN" Type="int" />
     <Property Name="CARI" Type="int" />
     <Property Name="PERSONEL" Type="smallint" />
     <Property Name="GELISTARIHI" Type="smalldatetime" />
     <Property Name="CIKISTARIHI" Type="smalldatetime" />
-  </EntityType>
-  <EntityType Name="TBLURUNTAKIP">
-    <Key>
-      <PropertyRef Name="TAKIPID" />
-    </Key>
-    <Property Name="TAKIPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="URUN" Type="int" />
-    <Property Name="DURUM" Type="varchar" MaxLength="250" />
-    <Property Name="TARIH" Type="int" />
-    <Property Name="TAKIPKODU" Type="char" MaxLength="5" />
+    <Property Name="URUNSERINO" Type="char" MaxLength="5" />
   </EntityType>
   <Association Name="FK_TBLFATURABILGI_TBLCARI">
     <End Role="TBLCARI" Type="Self.TBLCARI" Multiplicity="0..1" />
@@ -289,30 +297,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TBLURUNKABUL_TBLURUN">
-    <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
-    <End Role="TBLURUNKABUL" Type="Self.TBLURUNKABUL" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TBLURUN">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="TBLURUNKABUL">
-        <PropertyRef Name="URUN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TBLURUNTAKIP_TBLURUN">
-    <End Role="TBLURUN" Type="Self.TBLURUN" Multiplicity="0..1" />
-    <End Role="TBLURUNTAKIP" Type="Self.TBLURUNTAKIP" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TBLURUN">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="TBLURUNTAKIP">
-        <PropertyRef Name="URUN" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="DbTeknikServisModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
@@ -323,13 +307,14 @@
     <EntitySet Name="TBLFATURABILGI" EntityType="Self.TBLFATURABILGI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLFATURADETAY" EntityType="Self.TBLFATURADETAY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLGIDER" EntityType="Self.TBLGIDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLHAKKIMIZDA" EntityType="Self.TBLHAKKIMIZDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLILETISIM" EntityType="Self.TBLILETISIM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLKATEGORİ" EntityType="Self.TBLKATEGORİ" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLNOT" EntityType="Self.TBLNOT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLPERSONEL" EntityType="Self.TBLPERSONEL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLURUN" EntityType="Self.TBLURUN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLURUNHAREKET" EntityType="Self.TBLURUNHAREKET" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TBLURUNKABUL" EntityType="Self.TBLURUNKABUL" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TBLURUNTAKIP" EntityType="Self.TBLURUNTAKIP" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TBLFATURABILGI_TBLCARI" Association="Self.FK_TBLFATURABILGI_TBLCARI">
       <End Role="TBLCARI" EntitySet="TBLCARI" />
       <End Role="TBLFATURABILGI" EntitySet="TBLFATURABILGI" />
@@ -369,14 +354,6 @@
     <AssociationSet Name="FK_TBLURUNKABUL_TBLPERSONEL" Association="Self.FK_TBLURUNKABUL_TBLPERSONEL">
       <End Role="TBLPERSONEL" EntitySet="TBLPERSONEL" />
       <End Role="TBLURUNKABUL" EntitySet="TBLURUNKABUL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TBLURUNKABUL_TBLURUN" Association="Self.FK_TBLURUNKABUL_TBLURUN">
-      <End Role="TBLURUN" EntitySet="TBLURUN" />
-      <End Role="TBLURUNKABUL" EntitySet="TBLURUNKABUL" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TBLURUNTAKIP_TBLURUN" Association="Self.FK_TBLURUNTAKIP_TBLURUN">
-      <End Role="TBLURUN" EntitySet="TBLURUN" />
-      <End Role="TBLURUNTAKIP" EntitySet="TBLURUNTAKIP" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="22.2.3.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" PageWidth="850" PageHeight="1100" Version="22.2" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="1" ControlType="TopMarginBand" Name="TopMargin">
+      <Controls>
+        <Item1 Ref="2" ControlType="XRLabel" Name="label1" Multiline="true" TextTrimming="None" Text="DevExpressDeneme" TextAlignment="TopJustify" SizeF="423.9583,42.125" LocationFloat="10.0000067,47.8749924" Font="Arial, 14pt" ForeColor="255,192,0,0" Padding="2,2,0,0,100">
+          <StylePriority Ref="3" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="4" ControlType="DetailBand" Name="Detail" HeightF="136.041687">
+      <Controls>
+        <Item1 Ref="5" ControlType="XRLabel" Name="label4" Multiline="true" Text="Renk:Siyah" SizeF="170.833344,23" LocationFloat="10.0000381,113.041687" Padding="2,2,0,0,100" />
+        <Item2 Ref="6" ControlType="XRPictureBox" Name="pictureBox1" ImageUrl="C:\Users\Mukoo\Desktop\Ekran Alıntısı.JPG" Sizing="ZoomImage" SizeF="172.916656,126.041664" LocationFloat="271.875,10.0000067" />
+        <Item3 Ref="7" ControlType="XRLabel" Name="label3" Multiline="true" Text="Marka:ASUS " SizeF="170.833374,23" LocationFloat="10.0000067,67.00001" Padding="2,2,0,0,100" />
+        <Item4 Ref="8" ControlType="XRLabel" Name="label2" Multiline="true" Text="Ekran Kartı" SizeF="170.833344,22.9999981" LocationFloat="10.0000067,23.9166584" Padding="2,2,0,0,100" />
+      </Controls>
+    </Item2>
+    <Item3 Ref="9" ControlType="BottomMarginBand" Name="BottomMargin" />
+  </Bands>
+  <DesignerOptions Ref="10" ShowPrintingWarnings="false" />
+</XtraReportsLayoutSerializer>
