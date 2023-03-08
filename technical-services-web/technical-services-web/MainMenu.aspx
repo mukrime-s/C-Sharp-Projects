@@ -24,7 +24,7 @@
     <link href="web/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
     <link href="web/css/style.css" type="text/css" rel="stylesheet" media="all">
     <!-- font-awesome icons -->
-    <link href="web/css//fontawesome-all.min.css" rel="stylesheet">
+    <link href="web/css/fontawesome-all.min.css" rel="stylesheet">
     <!-- //Custom Theme files -->
     <!-- online-fonts -->
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
@@ -62,8 +62,8 @@
         <div class="banner-text-w3ls">
             <div class="container">
                 <div class="mx-auto text-center">
-                    <h1 style="color:brown;font-weight:bolder" >En uygun fiyatlar ve en uygun yüzlerce ürün bir yanı başınızda.</h1>
-					<p class="banp mx-auto mt-3"style="color:brown;font-weight:bolder">Yüzlerce farklı ürünle karşınızdayız  </p>
+                    <h1 style="color:darkmagenta;font-weight:bolder" >En uygun fiyatlar ve en uygun yüzlerce ürün bir yanı başınızda.</h1>
+					<p class="banp mx-auto mt-3"style="color:darkmagenta;font-weight:bolder">Yüzlerce farklı ürünle karşınızdayız  </p>
 					<a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="#about" role="button"style="color:white;font-weight:bolder;background-color:darkmagenta">Detaylar</a>
                 </div>
             </div>
