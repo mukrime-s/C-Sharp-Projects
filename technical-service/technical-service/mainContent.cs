@@ -151,5 +151,12 @@ namespace technical_service
             fk.MdiParent = this;
             fk.Show();
         }
+
+        private void btnMailGönder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmMailGonderme fk = new Forms.FrmMailGonderme();
+            fk.MdiParent = this;
+            fk.Show();
+        }
     }
 }
