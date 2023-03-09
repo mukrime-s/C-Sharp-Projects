@@ -51,7 +51,7 @@ namespace technical_service.Forms
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.lblEnYuksekFiyatlıUrun = new DevExpress.XtraEditors.LabelControl();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.lblEnFazlaUrunKategorisi = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lblEnFazlaStokluUrun = new DevExpress.XtraEditors.LabelControl();
@@ -84,7 +84,7 @@ namespace technical_service.Forms
             this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.labelControl37 = new DevExpress.XtraEditors.LabelControl();
+            this.lblEnFazlaUrunOlanMarka = new DevExpress.XtraEditors.LabelControl();
             this.labelControl38 = new DevExpress.XtraEditors.LabelControl();
             this.panel20 = new System.Windows.Forms.Panel();
             this.lblToplamMarkaSayisi = new DevExpress.XtraEditors.LabelControl();
@@ -352,24 +352,24 @@ namespace technical_service.Forms
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel8.Controls.Add(this.labelControl15);
+            this.panel8.Controls.Add(this.lblEnFazlaUrunKategorisi);
             this.panel8.Controls.Add(this.labelControl16);
             this.panel8.Location = new System.Drawing.Point(616, 177);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(283, 159);
             this.panel8.TabIndex = 7;
             // 
-            // labelControl15
+            // lblEnFazlaUrunKategorisi
             // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(24, 54);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(76, 45);
-            this.labelControl15.TabIndex = 1;
-            this.labelControl15.Text = "5656";
+            this.lblEnFazlaUrunKategorisi.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEnFazlaUrunKategorisi.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblEnFazlaUrunKategorisi.Appearance.Options.UseFont = true;
+            this.lblEnFazlaUrunKategorisi.Appearance.Options.UseForeColor = true;
+            this.lblEnFazlaUrunKategorisi.Location = new System.Drawing.Point(24, 54);
+            this.lblEnFazlaUrunKategorisi.Name = "lblEnFazlaUrunKategorisi";
+            this.lblEnFazlaUrunKategorisi.Size = new System.Drawing.Size(76, 45);
+            this.lblEnFazlaUrunKategorisi.TabIndex = 1;
+            this.lblEnFazlaUrunKategorisi.Text = "5656";
             // 
             // labelControl16
             // 
@@ -726,24 +726,24 @@ namespace technical_service.Forms
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.panel19.Controls.Add(this.labelControl37);
+            this.panel19.Controls.Add(this.lblEnFazlaUrunOlanMarka);
             this.panel19.Controls.Add(this.labelControl38);
             this.panel19.Location = new System.Drawing.Point(314, 351);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(283, 159);
             this.panel19.TabIndex = 13;
             // 
-            // labelControl37
+            // lblEnFazlaUrunOlanMarka
             // 
-            this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl37.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl37.Appearance.Options.UseFont = true;
-            this.labelControl37.Appearance.Options.UseForeColor = true;
-            this.labelControl37.Location = new System.Drawing.Point(24, 54);
-            this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(76, 45);
-            this.labelControl37.TabIndex = 1;
-            this.labelControl37.Text = "5656";
+            this.lblEnFazlaUrunOlanMarka.Appearance.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblEnFazlaUrunOlanMarka.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblEnFazlaUrunOlanMarka.Appearance.Options.UseFont = true;
+            this.lblEnFazlaUrunOlanMarka.Appearance.Options.UseForeColor = true;
+            this.lblEnFazlaUrunOlanMarka.Location = new System.Drawing.Point(24, 54);
+            this.lblEnFazlaUrunOlanMarka.Name = "lblEnFazlaUrunOlanMarka";
+            this.lblEnFazlaUrunOlanMarka.Size = new System.Drawing.Size(76, 45);
+            this.lblEnFazlaUrunOlanMarka.TabIndex = 1;
+            this.lblEnFazlaUrunOlanMarka.Text = "5656";
             // 
             // labelControl38
             // 
@@ -817,7 +817,7 @@ namespace technical_service.Forms
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmIstatistik";
-            this.Text = "FrmIstatistik";
+            this.Text = "Istatistikler";
             this.Load += new System.EventHandler(this.FrmIstatistik_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -887,7 +887,7 @@ namespace technical_service.Forms
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl lblEnYuksekFiyatlıUrun;
         private System.Windows.Forms.Panel panel8;
-        private DevExpress.XtraEditors.LabelControl labelControl15;
+        private DevExpress.XtraEditors.LabelControl lblEnFazlaUrunKategorisi;
         private DevExpress.XtraEditors.LabelControl labelControl16;
         private System.Windows.Forms.Panel panel9;
         private DevExpress.XtraEditors.LabelControl lblEnFazlaStokluUrun;
@@ -920,7 +920,7 @@ namespace technical_service.Forms
         private DevExpress.XtraEditors.LabelControl labelControl35;
         private DevExpress.XtraEditors.LabelControl labelControl36;
         private System.Windows.Forms.Panel panel19;
-        private DevExpress.XtraEditors.LabelControl labelControl37;
+        private DevExpress.XtraEditors.LabelControl lblEnFazlaUrunOlanMarka;
         private DevExpress.XtraEditors.LabelControl labelControl38;
         private System.Windows.Forms.Panel panel20;
         private DevExpress.XtraEditors.LabelControl lblToplamMarkaSayisi;

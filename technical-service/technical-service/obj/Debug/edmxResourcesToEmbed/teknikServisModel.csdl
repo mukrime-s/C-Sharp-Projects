@@ -358,6 +358,9 @@
     </AssociationSet>
     <EntitySet Name="TBLHAKKIMIZDA" EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" />
     <EntitySet Name="TBLILETISIM" EntityType="DbTeknikServisModel.TBLILETISIM" />
+    <FunctionImport Name="UrunKategori" ReturnType="Collection(DbTeknikServisModel.UrunKategori_Result)" />
+    <FunctionImport Name="ENFAZLA_URUNKATEGORISI" ReturnType="Collection(String)" />
+    <FunctionImport Name="ENFAZLAURUNUOLANMARKA" ReturnType="Collection(String)" />
   </EntityContainer>
   <EntityType Name="TBLHAKKIMIZDA">
     <Key>
@@ -376,4 +379,8 @@
     <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MESAJ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
+  <ComplexType Name="UrunKategori_Result">
+    <Property Type="String" Name="AD" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ADET" Nullable="true" />
+  </ComplexType>
 </Schema>

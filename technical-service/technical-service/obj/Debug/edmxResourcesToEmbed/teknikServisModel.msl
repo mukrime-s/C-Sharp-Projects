@@ -195,5 +195,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UrunKategori" FunctionName="DbTeknikServisModel.Store.UrunKategori">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DbTeknikServisModel.UrunKategori_Result">
+          <ScalarProperty Name="AD" ColumnName="AD" />
+          <ScalarProperty Name="ADET" ColumnName="ADET" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ENFAZLA_URUNKATEGORISI" FunctionName="DbTeknikServisModel.Store.ENFAZLA_URUNKATEGORISI" />
+    <FunctionImportMapping FunctionImportName="ENFAZLAURUNUOLANMARKA" FunctionName="DbTeknikServisModel.Store.ENFAZLAURUNUOLANMARKA" />
   </EntityContainerMapping>
 </Mapping>

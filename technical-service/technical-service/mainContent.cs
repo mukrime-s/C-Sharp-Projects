@@ -137,5 +137,19 @@ namespace technical_service
             Forms.FrmRapor fk = new Forms.FrmRapor();
             fk.Show();
         }
+
+        private void mainContent_Load(object sender, EventArgs e)
+        {
+            Forms.FrmAnaSayfa fk = new Forms.FrmAnaSayfa();
+            fk.MdiParent = this;
+            fk.Show();
+        }
+
+        private void btnAnaSayfa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmAnaSayfa fk = new Forms.FrmAnaSayfa();
+            fk.MdiParent = this;
+            fk.Show();
+        }
     }
 }

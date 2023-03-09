@@ -12,6 +12,8 @@ namespace technical_service
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class DbTeknikServisEntities : DbContext
     {
@@ -42,5 +44,20 @@ namespace technical_service
         public virtual DbSet<TBLURUNKABUL> TBLURUNKABUL { get; set; }
         public virtual DbSet<TBLHAKKIMIZDA> TBLHAKKIMIZDA { get; set; }
         public virtual DbSet<TBLILETISIM> TBLILETISIM { get; set; }
+    
+        public virtual ObjectResult<UrunKategori_Result> UrunKategori()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<UrunKategori_Result>("UrunKategori");
+        }
+    
+        public virtual ObjectResult<string> ENFAZLA_URUNKATEGORISI()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("ENFAZLA_URUNKATEGORISI");
+        }
+    
+        public virtual ObjectResult<string> ENFAZLAURUNUOLANMARKA()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("ENFAZLAURUNUOLANMARKA");
+        }
     }
 }

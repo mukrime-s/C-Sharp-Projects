@@ -302,6 +302,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="ENFAZLA_URUNKATEGORISI" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="ENFAZLAURUNUOLANMARKA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UrunKategori" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbTeknikServisModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
@@ -723,6 +726,9 @@
           </AssociationSet>
           <EntitySet Name="TBLHAKKIMIZDA" EntityType="DbTeknikServisModel.TBLHAKKIMIZDA" />
           <EntitySet Name="TBLILETISIM" EntityType="DbTeknikServisModel.TBLILETISIM" />
+          <FunctionImport Name="UrunKategori" ReturnType="Collection(DbTeknikServisModel.UrunKategori_Result)" />
+          <FunctionImport Name="ENFAZLA_URUNKATEGORISI" ReturnType="Collection(String)" />
+          <FunctionImport Name="ENFAZLAURUNUOLANMARKA" ReturnType="Collection(String)" />
         </EntityContainer>
         <EntityType Name="TBLHAKKIMIZDA">
           <Key>
@@ -741,6 +747,10 @@
           <Property Name="KONU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MESAJ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <ComplexType Name="UrunKategori_Result">
+          <Property Type="String" Name="AD" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="ADET" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -941,6 +951,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UrunKategori" FunctionName="DbTeknikServisModel.Store.UrunKategori">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DbTeknikServisModel.UrunKategori_Result">
+                <ScalarProperty Name="AD" ColumnName="AD" />
+                <ScalarProperty Name="ADET" ColumnName="ADET" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ENFAZLA_URUNKATEGORISI" FunctionName="DbTeknikServisModel.Store.ENFAZLA_URUNKATEGORISI" />
+          <FunctionImportMapping FunctionImportName="ENFAZLAURUNUOLANMARKA" FunctionName="DbTeknikServisModel.Store.ENFAZLAURUNUOLANMARKA" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
