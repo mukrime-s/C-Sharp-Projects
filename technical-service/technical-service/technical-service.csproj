@@ -267,6 +267,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>teknikServisModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UrunKategori_Result.cs">
+      <DependentUpon>teknikServisModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\FrmAnaSayfa.resx">
       <DependentUpon>FrmAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>

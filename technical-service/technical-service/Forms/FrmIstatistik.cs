@@ -40,7 +40,8 @@ namespace technical_service.Forms
             lblBilgisayarSayisi.Text = db.TBLURUN.Count(x => x.KATEGORI == 3).ToString();
             lblToplamMarkaSayisi.Text = (from x in db.TBLURUN
                                          select x.MARKA).Distinct().Count().ToString();
-
+            lblEnFazlaUrunKategorisi.Text = db.ENFAZLA_URUNKATEGORISI().FirstOrDefault();//procedure yardımıyla sorgu olusturuldu.
+            lblEnFazlaUrunOlanMarka.Text = db.ENFAZLAURUNUOLANMARKA().FirstOrDefault();//procedure yardımıyla sorgu olusturuldu.
         }
     }
 }
