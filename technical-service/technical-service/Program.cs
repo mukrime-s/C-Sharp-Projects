@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using technical_service.Forms;
 
 namespace technical_service
 {
@@ -16,7 +17,7 @@ namespace technical_service
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainContent());
+            Application.Run(new FrmLogin());
         }
     }
 }
