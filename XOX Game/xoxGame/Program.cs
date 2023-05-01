@@ -16,7 +16,7 @@ namespace xoxGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginScreen());
+            Application.Run(new Form1());
         }
     }
 }
