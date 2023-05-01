@@ -9,14 +9,3 @@ C:\Users\Mukoo\source\repos\xoxGame\xoxGame\obj\Debug\xoxGame.csproj.GenerateRes
 C:\Users\Mukoo\source\repos\xoxGame\xoxGame\obj\Debug\xoxGame.csproj.CoreCompileInputs.cache
 C:\Users\Mukoo\source\repos\xoxGame\xoxGame\obj\Debug\xoxGame.exe
 C:\Users\Mukoo\source\repos\xoxGame\xoxGame\obj\Debug\xoxGame.pdb
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\bin\Debug\xoxGame.exe.config
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\bin\Debug\xoxGame.exe
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\bin\Debug\xoxGame.pdb
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.csproj.AssemblyReference.cache
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.Form1.resources
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.loginScreen.resources
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.Properties.Resources.resources
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.csproj.GenerateResource.cache
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.csproj.CoreCompileInputs.cache
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.exe
-C:\Users\mrtbl\OneDrive\Masaüstü\XOX Game\xoxGame\obj\Debug\xoxGame.pdb

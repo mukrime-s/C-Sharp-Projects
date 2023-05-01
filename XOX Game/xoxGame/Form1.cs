@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace xoxGame
 {
@@ -66,8 +65,8 @@ namespace xoxGame
             Reset();
 
             // X ve O resimlerini yükle
-            Image xImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"\images\x.png");
-            Image oImage = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + @"\images\o.png");
+            Image xImage = Image.FromFile(Application.StartupPath + @"../../../images/x.png");
+            Image oImage = Image.FromFile(Application.StartupPath + @"../../../images/o.png");
 
             // Her butona sırayla X ve O resimlerini ata
             for (int i = 0; i < buttons.Length; i++)
