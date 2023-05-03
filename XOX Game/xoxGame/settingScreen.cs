@@ -30,5 +30,15 @@ namespace xoxGame
             ap.Show();
             this.Hide();
         }
+
+        private void settingScreen_Load(object sender, EventArgs e)
+        {
+            if (loginScreen.userName=="admin")
+            {
+                btnAdminPanel.Visible = true;
+            }
+            else
+                btnAdminPanel.Visible = false;
+        }
     }
 }
