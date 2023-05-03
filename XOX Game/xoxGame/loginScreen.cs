@@ -37,6 +37,14 @@ namespace xoxGame
 
             if (ad == "admin" && parola == "admin")
             {
+                userName = txtUsername.Text;
+                settingScreen setting = new settingScreen();
+                setting.Show();
+                this.Hide();
+            }
+            if (ad == "user" && parola == "user")
+            {
+                userName = txtUsername.Text;
                 settingScreen setting = new settingScreen();
                 setting.Show();
                 this.Hide();

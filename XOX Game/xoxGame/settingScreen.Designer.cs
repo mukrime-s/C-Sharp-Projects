@@ -73,6 +73,7 @@ namespace xoxGame
             this.Controls.Add(this.btnDifficultyLevel);
             this.Name = "settingScreen";
             this.Text = "settingScreen";
+            this.Load += new System.EventHandler(this.settingScreen_Load);
             this.ResumeLayout(false);
 
         }
