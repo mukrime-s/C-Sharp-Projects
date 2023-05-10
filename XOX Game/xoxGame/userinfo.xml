@@ -8,4 +8,12 @@
 		<NameSurname>user</NameSurname>
 		<Mail>user</Mail>
 	</userInformation>
+	<userInformation>
+		<id>1</id>
+		<UserType>a</UserType>
+		<Username>a</Username>
+		<Password>a</Password>
+		<NameSurname>a</NameSurname>
+		<Mail>a</Mail>
+	</userInformation>
 </users> 
