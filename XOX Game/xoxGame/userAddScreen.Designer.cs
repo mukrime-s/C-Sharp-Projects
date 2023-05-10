@@ -51,6 +51,7 @@ namespace xoxGame
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 22);
             this.txtId.TabIndex = 0;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label1
             // 
@@ -60,6 +61,7 @@ namespace xoxGame
             this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -69,6 +71,7 @@ namespace xoxGame
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "UserType";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtUserType
             // 
@@ -76,6 +79,7 @@ namespace xoxGame
             this.txtUserType.Name = "txtUserType";
             this.txtUserType.Size = new System.Drawing.Size(100, 22);
             this.txtUserType.TabIndex = 2;
+            this.txtUserType.TextChanged += new System.EventHandler(this.txtUserType_TextChanged);
             // 
             // label3
             // 
@@ -85,6 +89,7 @@ namespace xoxGame
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Username";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtUsername
             // 
@@ -92,6 +97,7 @@ namespace xoxGame
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 22);
             this.txtUsername.TabIndex = 4;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // label4
             // 
@@ -101,6 +107,7 @@ namespace xoxGame
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtPassword
             // 
@@ -108,6 +115,7 @@ namespace xoxGame
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 6;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label5
             // 
@@ -117,6 +125,7 @@ namespace xoxGame
             this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "NameSurname";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtNameSurname
             // 
@@ -124,6 +133,7 @@ namespace xoxGame
             this.txtNameSurname.Name = "txtNameSurname";
             this.txtNameSurname.Size = new System.Drawing.Size(100, 22);
             this.txtNameSurname.TabIndex = 8;
+            this.txtNameSurname.TextChanged += new System.EventHandler(this.txtNameSurname_TextChanged);
             // 
             // Mail
             // 
@@ -133,6 +143,7 @@ namespace xoxGame
             this.Mail.Size = new System.Drawing.Size(33, 17);
             this.Mail.TabIndex = 13;
             this.Mail.Text = "Mail";
+            this.Mail.Click += new System.EventHandler(this.Mail_Click);
             // 
             // txtMail
             // 
@@ -140,6 +151,7 @@ namespace xoxGame
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(100, 22);
             this.txtMail.TabIndex = 12;
+            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // btnSave
             // 
