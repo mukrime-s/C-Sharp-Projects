@@ -42,6 +42,7 @@ namespace xoxGame
             this.btnDifficultyLevel.TabIndex = 0;
             this.btnDifficultyLevel.Text = "Difficulty Level";
             this.btnDifficultyLevel.UseVisualStyleBackColor = true;
+            this.btnDifficultyLevel.Click += new System.EventHandler(this.btnDifficultyLevel_Click);
             // 
             // btnAdminPanel
             // 

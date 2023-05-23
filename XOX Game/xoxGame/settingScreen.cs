@@ -40,5 +40,12 @@ namespace xoxGame
             else
                 btnAdminPanel.Visible = false;
         }
+
+        private void btnDifficultyLevel_Click(object sender, EventArgs e)
+        {
+            difficultyLevel dl = new difficultyLevel();
+            dl.Show();
+            this.Hide();
+        }
     }
 }

@@ -7,9 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
-using System.Linq;
 using System.IO;
 using System.Security.Cryptography;
+using System.Data.SqlClient;
 
 namespace xoxGame
 {
@@ -20,6 +20,12 @@ namespace xoxGame
             InitializeComponent();
         }
         string file = @"../../../counter.txt";
+        /**
+         * @brief Veri tabaninin kullanilmasi icin degiskenler olusturuldu.
+         */
+        SqlConnection baglanti;
+        SqlCommand komut;
+        SqlDataAdapter da;
         private void btnBack_Click(object sender, EventArgs e)
         {
             adminPanel ap = new adminPanel();
@@ -29,6 +35,7 @@ namespace xoxGame
 
         private void userAddScreen_Load(object sender, EventArgs e)
         {
+            baglanti = new SqlConnection("server=.; Initial Catalog=userinfo;Integrated Security=SSPI");
             string file = @"../../../counter.txt";
             if (File.Exists(file) == true)
             {
@@ -61,17 +68,17 @@ namespace xoxGame
                  && (txtMail.Text != ""))
             {
 
-                XDocument x = XDocument.Load(@"../../userinfo.xml");
-                x.Element("users").Add(
-                    new XElement("userInformation",
-                    new XElement("id", counter),
-                    new XElement("UserType", txtUserType.Text),
-                    new XElement("Username", txtUsername.Text),
-                    new XElement("Password", txtPassword),
-                    new XElement("NameSurname", txtNameSurname.Text),
-                    new XElement("Mail", txtMail.Text)));
-                x.Save(@"../../../userinfo.xml");
-                label1.Text = "Saved";
+                string sorgu = "INSERT INTO userinfo (UserType,Username,Passwords,NameSurname,Mail) values (@UserType,@Username,@Password,@NameSurname,@Mail)";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@UserType", txtUserType.Text);
+                komut.Parameters.AddWithValue("@Username", txtUsername.Text);
+                komut.Parameters.AddWithValue("@Passwords", txtPassword.Text);
+                komut.Parameters.AddWithValue("@NameSurname", txtNameSurname.Text);
+                komut.Parameters.AddWithValue("@Mail", txtMail.Text);
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Saved");
             }
             else
             {
@@ -82,66 +89,6 @@ namespace xoxGame
                 temp = count.ToString();
                 File.WriteAllText(file, temp);
             }
-        }
-
-        private void Mail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtMail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNameSurname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUserType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

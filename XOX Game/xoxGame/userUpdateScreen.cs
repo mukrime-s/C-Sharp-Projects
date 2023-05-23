@@ -7,9 +7,10 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
-using System.Linq;
 using System.IO;
 using System.Security.Cryptography;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace xoxGame
 {
@@ -19,7 +20,12 @@ namespace xoxGame
         {
             InitializeComponent();
         }
-
+        /**
+         * @brief Veri tabaninin kullanilmasi icin degiskenler olusturuldu.
+         */
+        SqlConnection baglanti;
+        SqlCommand komut;
+        SqlDataAdapter da;
         private void btnBack_Click(object sender, EventArgs e)
         {
             adminPanel ap = new adminPanel();
@@ -29,20 +35,21 @@ namespace xoxGame
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            XDocument x = XDocument.Load(@"../../../userinfo.xml");
-            XElement update = x.Element("users").Elements("userInformation").FirstOrDefault(a => a.Element("id").Value.Trim() == txtId.Text);
+            string sorgu = "UPDATE userinfo Set (UserType,Username,Passwords,NameSurname,Mail) values (@UserType,@Username,@Password,@NameSurname,@Mail)";
+            komut = new SqlCommand(sorgu, baglanti);
             if ((txtPassword.Text != "") && (txtNameSurname.Text != "") //tüm kullanıcı bilgilerini doldurması için
                 && (txtMail.Text != ""))
             {
-                if (update != null)
-                {
-                    update.SetElementValue("UserType", txtUserType.Text);
-                    update.SetElementValue("Password", txtPassword.Text);
-                    update.SetElementValue("NameSurname", txtNameSurname.Text);
-                    update.SetElementValue("Mail", txtMail.Text);
-                    x.Save(@"../../../userinfo.xml");
-                }
-                label1.Text = "Saved";
+
+                baglanti.Open();
+                da = new SqlDataAdapter("select count(*) from userinfo where id = " + txtId.Text + "", baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                komut = new SqlCommand("update userinfo set UserType = '" + txtUserType.Text.ToString() + "'," +
+                    "Passwords = '" + txtPassword.Text.ToString() + "',NameSurname = '" + txtNameSurname.Text.ToString() + "',Mail = '" + txtMail.Text.ToString() + "'where id =" + txtId.Text + "", baglanti);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Saved");
 
             }
             else
