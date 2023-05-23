@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace xoxGame
 {
@@ -20,19 +19,18 @@ namespace xoxGame
         {
             InitializeComponent();
         }
+        public static SqlConnection baglanti;
+        public static SqlCommand komut;
+        public static SqlDataAdapter da;
         void listele()
         {
-            XmlDocument x = new XmlDocument();
-            DataSet ds = new DataSet();
-            XmlReader xmlfile;
-            xmlfile = XmlReader.Create(@"../../../userinfo.xml", new XmlReaderSettings());
-            ds.ReadXml(xmlfile);
-
-            ds.Tables[0].Columns.Remove(ds.Tables[0].Columns["Password"]);
-
-            dataGridView1.DataSource = ds.Tables[0];
-
-            xmlfile.Close();
+            baglanti = new SqlConnection("server=.; Initial Catalog=userinfo;Integrated Security=SSPI");
+            baglanti.Open();
+            da = new SqlDataAdapter("SELECT *FROM userinfo", baglanti);
+            DataTable tablo = new DataTable();
+            da.Fill(tablo);
+            dataGridView1.DataSource = tablo;
+            baglanti.Close();
         }
 
         private void btnList_Click(object sender, EventArgs e)
@@ -56,17 +54,24 @@ namespace xoxGame
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string file = @"../../../userinfo.xml";
-            XDocument x = XDocument.Load(file);
-            XElement rootElement = x.Root;
-            foreach (XElement Users in rootElement.Elements())
+            DialogResult dialogResult = MessageBox.Show("Do you want to permanently delete the user?", "Delete Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                if (Users.Element("id").Value == txtDelete.Text) //idye göre silme işlemi yapıldı.
-                {
-                    Users.Remove();
-                }
+                string sorgu = "DELETE FROM userinfo WHERE id=@id";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@id", dataGridView1.CurrentRow.Cells[0].Value);
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                listele();
+                MessageBox.Show("User permanently deleted");
+                settingScreen sc = new settingScreen();
+                sc.Show();
+                this.Hide();
             }
-            x.Save(file);
+            else if (dialogResult == DialogResult.No)
+            {
+            }
         }
     }
 

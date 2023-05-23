@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<users>
+  <userInformation>
+    <id>12</id>
+    <UserType>a</UserType>
+    <Username>a</Username>
+    <Password>a</Password>
+    <NameSurname>a</NameSurname>
+    <Mail>a</Mail>
+  </userInformation>
+  <userInformation>
+    <id>13</id>
+    <UserType>b</UserType>
+    <Username>b</Username>
+    <Password>b</Password>
+    <NameSurname>b</NameSurname>
+    <Mail>b</Mail>
+  </userInformation>
+  <userInformation>
+    <id>14</id>
+    <UserType>c</UserType>
+    <Username>c</Username>
+    <Password>c</Password>
+    <NameSurname>c</NameSurname>
+    <Mail>c</Mail>
+  </userInformation>
+  <userInformation>
+    <id>15</id>
+    <UserType>e</UserType>
+    <Username>e</Username>
+    <Password>e</Password>
+    <NameSurname>e</NameSurname>
+    <Mail>e</Mail>
+  </userInformation>
+</users>
